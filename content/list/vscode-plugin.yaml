@@ -55,3 +55,7 @@ links:
   - title: 'Draw.io integration'
     description: 'Create diagrams within Visual Studio Code.'
     href: 'https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio'
+
+  - title: 'Markdown Table Prettifier'
+    description: 'Transforms markdown tables to be more readable.'
+    href: 'https://marketplace.visualstudio.com/items?itemName=darkriszty.markdown-table-prettify'

@@ -26,10 +26,16 @@ function getResume() {
       end: 'Present',
     },
     {
+      company: 'InvestorHub',
+      title: 'Senior Platform Engineer',
+      start: '2026',
+      end: 'Present',
+    },
+    {
       company: 'Telstra',
       title: 'Senior Software Developer',
       start: '2017',
-      end: 'Present',
+      end: '2026',
     },
     {
       company: 'Property1View',
