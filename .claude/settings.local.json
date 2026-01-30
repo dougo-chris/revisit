@@ -1,24 +1,24 @@
 {
   "permissions": {
     "allow": [
-      "Bash(tree:*)",
-      "Bash(npm outdated:*)",
       "Bash(asdf local:*)",
       "Bash(asdf set:*)",
-      "Bash(npm update:*)",
-      "Bash(npm install:*)",
-      "Bash(npm audit:*)",
-      "Bash(timeout 15 npm run dev:*)",
-      "Bash(npm run build:*)",
-      "Bash(xargs:*)",
+      "Bash(curl:*)",
+      "Bash(kill:*)",
       "Bash(ls:*)",
-      "WebSearch",
+      "Bash(npm audit:*)",
+      "Bash(npm install:*)",
+      "Bash(npm outdated:*)",
+      "Bash(npm run build:*)",
       "Bash(npm run dev:*)",
       "Bash(npm uninstall:*)",
-      "Bash(kill:*)",
-      "Bash(curl:*)",
+      "Bash(npm update:*)",
+      "Bash(npm view:*)",
       "Bash(pkill:*)",
-      "Bash(npm view:*)"
+      "Bash(timeout 15 npm run dev:*)",
+      "Bash(tree:*)",
+      "Bash(xargs:*)",
+      "WebSearch(*)"
     ]
   }
 }
