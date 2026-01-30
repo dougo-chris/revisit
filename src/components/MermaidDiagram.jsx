@@ -10,6 +10,10 @@ export function MermaidDiagram({ children }) {
 
     const renderDiagram = async () => {
       try {
+        if (!children || typeof children !== 'string' || !children.trim()) {
+          throw new Error('No diagram content provided')
+        }
+
         const mermaid = (await import('mermaid')).default
 
         const isDark = document.documentElement.classList.contains('dark')
@@ -18,7 +22,7 @@ export function MermaidDiagram({ children }) {
           startOnLoad: false,
           theme: 'base',
           themeVariables: {
-            primaryColor: isDark ? '#2dd4bf' : '#14b8a6',
+            primaryColor: isDark ? '#2dd4bf' : '#0d9488',
             primaryTextColor: isDark ? '#fafafa' : '#18181b',
             primaryBorderColor: isDark ? '#0d9488' : '#0f766e',
             lineColor: isDark ? '#71717a' : '#a1a1aa',
@@ -77,8 +81,20 @@ export function MermaidDiagram({ children }) {
     return (
       <div className="rounded-lg border border-red-500 bg-red-50 p-4 dark:bg-red-950">
         <p className="text-sm text-red-800 dark:text-red-200">
-          <strong>Mermaid Syntax Error:</strong> {error}
+          <strong>Mermaid Error:</strong> {error}
         </p>
+        <details className="mt-2">
+          <summary className="cursor-pointer text-xs">View source</summary>
+          <pre className="mt-2 text-xs overflow-x-auto">{children}</pre>
+        </details>
+      </div>
+    )
+  }
+
+  if (!svg) {
+    return (
+      <div className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-zinc-900">
+        <p className="text-sm text-gray-500 dark:text-gray-400">Loading diagram...</p>
       </div>
     )
   }

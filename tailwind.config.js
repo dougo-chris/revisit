@@ -4,6 +4,14 @@ module.exports = {
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
+    extend: {
+      colors: {
+        teal: {
+          500: '#0d9488', // Darker teal for light mode (was #14b8a6)
+          600: '#0f766e', // Even darker for hover states
+        },
+      },
+    },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],

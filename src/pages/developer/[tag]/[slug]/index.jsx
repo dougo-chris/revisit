@@ -4,7 +4,7 @@ import rehypePrism from '@mapbox/rehype-prism'
 
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { getContents, getContent } from '@/lib/getContent'
-import { CodeBlock } from '@/components/CodeBlock'
+import { CodeBlock, PreBlock } from '@/components/CodeBlock'
 
 export default function DeveloperTagSlug({ content }) {
   return (
@@ -21,6 +21,7 @@ export default function DeveloperTagSlug({ content }) {
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypePrism]}
           components={{
+            pre: PreBlock,
             code: CodeBlock,
           }}
         >

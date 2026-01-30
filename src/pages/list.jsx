@@ -21,7 +21,7 @@ function Content({ content }) {
   return (
     <article className="group">
       <a href={content.href}>
-        <div className="grid grid-cols-10 py-2 group-hover:bg-gray-50 dark:group-hover:bg-zinc-800">
+        <div className="grid grid-cols-10 py-3 group-hover:bg-gray-50 dark:group-hover:bg-zinc-800">
           <div className="col-span-10 text-sm font-semibold text-gray-800 lg:col-span-3 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
             <ChevronRightIcon className="inline-block w-5 h-5 -mt-0.5 stroke-current" />
             {content.title}

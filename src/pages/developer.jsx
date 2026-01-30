@@ -21,7 +21,7 @@ function MenuItem({ tag, title, selected }) {
 
 function Content({ content }) {
   return (
-    <article className="py-2 group hover:bg-gray-50 dark:hover:bg-zinc-800">
+    <article className="py-4 group hover:bg-gray-50 dark:hover:bg-zinc-800">
       <a href={`/developer/${content.tag}/${content.slug}`}>
         <h3 className="flex justify-between text-sm font-semibold text-gray-800 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
           <span className="ml-2">
