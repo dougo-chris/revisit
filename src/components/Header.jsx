@@ -131,7 +131,7 @@ function ModeToggle() {
     if (isDarkMode === isSystemDarkMode) {
       delete window.localStorage.isDarkMode
     } else {
-      window.localStorage.isDarkMode = isDarkMode
+      window.localStorage.isDarkMode = String(isDarkMode)
     }
   }
 

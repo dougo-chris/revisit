@@ -1,14 +1,18 @@
-# Fix Dark Mode Persistence
+# Fix Dark Mode Persistence and Styles
 
-Fix localStorage type mismatch preventing dark mode preference from persisting across page loads
+Fix two issues preventing dark mode from working correctly
 
-## Status: 📝 Spec
+## Status: ✅ Implemented (2026-01-31)
 
 ## Problem
 
+Dark mode had two separate issues:
+
+### Issue 1: localStorage Type Mismatch
+
 The dark mode toggle button doesn't properly persist user preference across page loads due to a type mismatch:
 
-1. **Storage** (`src/components/Header.jsx:154`): Stores as boolean
+1. **Storage** (`src/components/Header.jsx:134`): Stores as boolean
    ```javascript
    window.localStorage.isDarkMode = isDarkMode  // stores true/false
    ```
@@ -18,22 +22,33 @@ The dark mode toggle button doesn't properly persist user preference across page
    let isDarkMode = window.localStorage.isDarkMode === 'true'  // checks for 'true' string
    ```
 
-### Current Behavior
+**Behavior:**
 - User toggles dark mode → stores `true` (boolean) in localStorage
 - Page reloads → checks for `'true'` (string) → doesn't match → preference lost
 - Dark mode reverts to system preference on every page load
 
+### Issue 2: Tailwind v4 Configuration
+
+Tailwind CSS v4 uses a new CSS-first configuration approach. The `darkMode: 'class'` setting in `tailwind.config.js` is ignored when using `@import "tailwindcss"`.
+
+**Behavior:**
+- The `.dark` class is correctly added to `<html>` element
+- localStorage correctly stores the preference
+- BUT dark mode styles (`dark:bg-black`, etc.) don't apply
+- Page stays in light mode despite having the dark class
+
 ### Expected Behavior
 - User toggles dark mode → preference persists across page loads
 - Dark mode state maintained independently of system preference once manually toggled
+- Dark mode styles apply immediately when `.dark` class is present
 
 ## Solution
 
-Ensure consistency by storing the preference as a string in the toggle function.
+Two fixes were required:
 
-### File to Modify
+### Fix 1: localStorage Type Consistency
 
-**`src/components/Header.jsx`** (line 154)
+**File:** `src/components/Header.jsx` (line 134)
 
 Change:
 ```javascript
@@ -45,14 +60,23 @@ To:
 window.localStorage.isDarkMode = String(isDarkMode)
 ```
 
-### Why This Fix
+**Why:** The initialization script expects string values. Storing as string ensures compatibility.
 
-The initialization script in `_document.jsx` is correctly written to:
-1. Read string values from localStorage
-2. Handle the absence of a preference (falls back to system preference)
-3. Clean up localStorage when preference matches system preference
+### Fix 2: Tailwind v4 Dark Mode Configuration
 
-The toggle function should match this contract by storing strings.
+**File:** `src/styles/tailwind.css`
+
+Add after the imports:
+```css
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@variant dark (&:where(.dark, .dark *));
+
+@import './prism.css';
+```
+
+**Why:** Tailwind v4 requires dark mode variants to be configured in CSS, not in `tailwind.config.js`. The `@variant dark` directive tells Tailwind to apply `dark:` classes when `.dark` class is present on any parent element.
 
 ## Testing
 
@@ -89,18 +113,27 @@ The toggle function should match this contract by storing strings.
 - ✅ Transitions disabled during toggle (no flash)
 - ✅ Responsive to system preference changes (when no manual override)
 
-## Files Involved
+## Files Modified
 
-- `src/components/Header.jsx` - Toggle button and logic (TO MODIFY)
-- `src/pages/_document.jsx` - Initialization script (NO CHANGES)
+- `src/components/Header.jsx` - Fixed localStorage type (line 134)
+- `src/styles/tailwind.css` - Added Tailwind v4 dark mode configuration
+- `src/pages/_document.jsx` - No changes (initialization script was correct)
 
 ## Implementation Notes
 
-- This is a one-line fix
-- No changes needed to the initialization script
-- No changes needed to type handling elsewhere
-- Maintains backward compatibility (existing stored values will work)
-- Dark mode will self-heal on next toggle for users with existing boolean values
+- **localStorage fix** - One-line change, maintains backward compatibility
+- **Tailwind v4 fix** - Required for v4's CSS-first configuration approach
+- The `tailwind.config.js` file still has `darkMode: 'class'` but this is ignored in v4 when using CSS imports
+- Dark mode will self-heal on next toggle for users with existing boolean values in localStorage
+- Both fixes were necessary - neither alone would have solved the problem completely
+
+## Debug Process
+
+Created a temporary debug page (`/debug-dark-mode`) to diagnose the issue:
+- Confirmed `.dark` class was being added correctly
+- Confirmed localStorage was being set
+- Discovered that dark mode styles weren't applying despite correct class
+- Identified Tailwind v4 configuration issue
 
 ## Related Components
 
