@@ -1,0 +1,171 @@
+{
+  "links": [
+    {
+      "title": "plug_cowboy",
+      "description": "Web Server"
+    },
+    {
+      "title": "phoenix"
+    },
+    {
+      "title": "phoenix_html"
+    },
+    {
+      "title": "phoenix_view"
+    },
+    {
+      "title": "phoenix_live_view"
+    },
+    {
+      "title": "dns_cluster",
+      "description": "Cluster"
+    },
+    {
+      "title": "phoenix_ecto",
+      "description": "Database"
+    },
+    {
+      "title": "ecto_sql"
+    },
+    {
+      "title": "postgrex"
+    },
+    {
+      "title": "scrivener_ecto",
+      "description": "Pagination"
+    },
+    {
+      "title": "tzdata",
+      "description": "Date & Time"
+    },
+    {
+      "title": "amqp",
+      "description": "RabbitMQ"
+    },
+    {
+      "title": "amqp_client"
+    },
+    {
+      "title": "poolboy"
+    },
+    {
+      "title": "earmark",
+      "description": "Markdown & Templates"
+    },
+    {
+      "title": "html_sanitize_ex"
+    },
+    {
+      "title": "liquex"
+    },
+    {
+      "title": "floki"
+    },
+    {
+      "title": "joken",
+      "description": "Authentication"
+    },
+    {
+      "title": "bcrypt_elixir"
+    },
+    {
+      "title": "hammer",
+      "description": "API Rate Limiting"
+    },
+    {
+      "title": "jason",
+      "description": "JSON Encoding"
+    },
+    {
+      "title": "req",
+      "description": "API Requests"
+    },
+    {
+      "title": "ex_aws",
+      "description": "AWS API"
+    },
+    {
+      "title": "ex_aws_s3"
+    },
+    {
+      "title": "sweet_xml"
+    },
+    {
+      "title": "mail",
+      "description": "Email"
+    },
+    {
+      "title": "premailex"
+    },
+    {
+      "title": "swoosh"
+    },
+    {
+      "title": "gen_smtp"
+    },
+    {
+      "title": "quantum",
+      "description": "Cron Jobs"
+    },
+    {
+      "title": "nebulex",
+      "description": "Cache"
+    },
+    {
+      "title": "telemetry_metrics",
+      "description": "Telemetry"
+    },
+    {
+      "title": "telemetry_poller"
+    },
+    {
+      "title": "phoenix_live_dashboard"
+    },
+    {
+      "title": "peep"
+    },
+    {
+      "title": "recon",
+      "description": "Debugger"
+    },
+    {
+      "title": "observer_cli"
+    },
+    {
+      "title": "esbuild",
+      "description": "Javascript"
+    },
+    {
+      "title": "tailwind"
+    },
+    {
+      "title": "heroicons"
+    },
+    {
+      "title": "phoenix_live_reload",
+      "description": "Reload Code"
+    },
+    {
+      "title": "dialyxir",
+      "description": "Dev & Test"
+    },
+    {
+      "title": "credo"
+    },
+    {
+      "title": "mix_test_watch"
+    },
+    {
+      "title": "faker"
+    },
+    {
+      "title": "excoveralls"
+    },
+    {
+      "title": "mock"
+    },
+    {
+      "title": "ex_machina"
+    }
+  ]
+}

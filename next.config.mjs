@@ -1,5 +1,3 @@
-import withYaml from 'next-plugin-yaml'
-
 const nextConfig = {
   /**
    * Enable static exports.
@@ -30,4 +28,4 @@ const nextConfig = {
   },
 }
 
-export default withYaml(nextConfig)
+export default nextConfig

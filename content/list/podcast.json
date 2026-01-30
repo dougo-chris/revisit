@@ -1,0 +1,242 @@
+{
+  "links": [
+    {
+      "title": "This Working Life",
+      "href": "https://www.abc.net.au/listen/programs/this-working-life/",
+      "feed": "https://www.abc.net.au/feeds/7104462/podcast.xml"
+    },
+    {
+      "title": "In The Blink of AI",
+      "href": "https://dayone.fm/show/in-the-blink-of-ai",
+      "feed": "https://feeds.captivate.fm/blink-of-ai-dayone/"
+    },
+    {
+      "title": "Empire",
+      "href": "https://empirepod.supportingcast.fm/",
+      "feed": "https://feeds.megaphone.fm/empirepodcast"
+    },
+    {
+      "title": "Built to Sell Radio",
+      "href": "https://builttosell.com/podcast/",
+      "feed": "https://builttosell.libsyn.com/rss"
+    },
+    {
+      "title": "The Contrarians",
+      "href": "https://www.thecontrarianspod.com/",
+      "feed": "https://www.omnycontent.com/d/playlist/88b564ea-a9a6-4751-910a-a5d800019396/18a0368f-0322-48e4-8e5c-b2fa006bbc08/1afe037e-3381-4acc-afc1-b2fa006bbc35/podcast.rss"
+    },
+    {
+      "title": "Scamfluencers",
+      "href": "https://wondery.com/shows/scamfluencers/",
+      "feed": "https://rss.art19.com/scamfluencers"
+    },
+    {
+      "title": "Pick My Brain",
+      "href": "https://dayone.fm/show/pick-my-brain",
+      "feed": "https://feeds.captivate.fm/pick-my-brain-dayonefm/"
+    },
+    {
+      "title": "Planet Money",
+      "href": "https://www.npr.org/podcasts/510289/planet-money",
+      "feed": "https://feeds.npr.org/510289/podcast.xml"
+    },
+    {
+      "title": "Slow & Steady",
+      "href": "https://slowandsteadypodcast.com/",
+      "feed": "https://feeds.transistor.fm/slow-steady"
+    },
+    {
+      "title": "The $100 MBA Show",
+      "href": "https://100mba.net/show/",
+      "feed": "https://feeds.simplecast.com/equXS9ic"
+    },
+    {
+      "title": "Startup to Last",
+      "href": "https://www.startuptolast.com/",
+      "feed": "https://feeds.transistor.fm/startup-to-last"
+    },
+    {
+      "title": "If You're Listening",
+      "href": "https://www.abc.net.au/listen/programs/if-youre-listening/",
+      "feed": "https://www.abc.net.au/feeds/9593214/podcast.xml"
+    },
+    {
+      "title": "Thinking Elixir Podcast",
+      "href": "https://podcast.thinkingelixir.com",
+      "feed": "https://feeds.fireside.fm/thinkingelixir/rss"
+    },
+    {
+      "title": "Acquired",
+      "href": "https://www.acquired.fm",
+      "feed": "https://feeds.transistor.fm/acquired"
+    },
+    {
+      "title": "Rework",
+      "href": "https://37signals.com/podcast/",
+      "feed": "https://feeds.buzzsprout.com/2260539.rss"
+    },
+    {
+      "title": "My First Million",
+      "href": "https://www.mfmpod.com",
+      "feed": "https://feeds.megaphone.fm/HS2300184645"
+    },
+    {
+      "title": "Open the Pod Bay Doors",
+      "href": "https://innovationbay.com/",
+      "feed": "https://www.omnycontent.com/d/playlist/9c434ae7-dbdc-45ab-9d27-aed80050a466/7f49a175-f407-46af-bda8-aed80050d4be/6c9c125b-0f0e-4794-90fe-aed80050d4cc/podcast.rss"
+    },
+    {
+      "title": "British Scandal",
+      "href": "https://wondery.com/shows/british-scandal/",
+      "feed": "https://rss.art19.com/british-scandal"
+    },
+    {
+      "title": "First Cheque",
+      "href": "https://dayone.fm/show/first-cheque",
+      "feed": "https://feeds.captivate.fm/first-cheque-dayone/"
+    },
+    {
+      "title": "Startups For the Rest of Us",
+      "href": "https://www.startupsfortherestofus.com",
+      "feed": "https://feeds.castos.com/mqv6"
+    },
+    {
+      "title": "Mostly Technical",
+      "href": "https://mostlytechnical.com",
+      "feed": "https://feeds.transistor.fm/mostly-technical"
+    },
+    {
+      "title": "The Big Flop",
+      "href": "https://wondery.com/shows/the-big-flop/",
+      "feed": "https://rss.art19.com/the-big-flop"
+    },
+    {
+      "title": "Tropical MBA",
+      "href": "http://www.TropicalMBA.com/episodes",
+      "feed": "https://feeds.fireside.fm/tropicalmba/rss"
+    },
+    {
+      "title": "The Foundr Podcast",
+      "href": "http://www.foundr.com",
+      "feed": "https://feeds.megaphone.fm/YAP2464511803"
+    },
+    {
+      "title": "Startup Acquisition Stories",
+      "href": "https://www.youtube.com/playlist?list=PLO30Q8WzVLKPnZpIOIZ2sR817n24fNJFI",
+      "feed": "https://anchor.fm/s/71db7ab0/podcast/rss"
+    },
+    {
+      "title": "The Startup Playbook",
+      "href": "https://startupplaybook.co",
+      "feed": "https://startupplaybook.co/feed/podcast/"
+    },
+    {
+      "title": "Politics Now",
+      "href": "https://www.abc.net.au/listen/programs/politics-now/",
+      "feed": "https://www.abc.net.au/feeds/7288214/podcast.xml"
+    },
+    {
+      "title": "The Bootstrapped Founder",
+      "href": "https://thebootstrappedfounder.com/",
+      "feed": "https://feeds.transistor.fm/bootstrapped-founder"
+    },
+    {
+      "title": "The Panel",
+      "href": "https://panelpodcast.com",
+      "feed": "https://feeds.transistor.fm/the-panel"
+    },
+    {
+      "title": "Trump's Terms",
+      "href": "https://www.npr.org/podcasts/510374/trumps-terms",
+      "feed": "https://feeds.npr.org/510374/podcast.xml"
+    },
+    {
+      "title": "Rogue Startups",
+      "href": "https://roguestartups.com",
+      "feed": "https://feeds.castos.com/e69d"
+    },
+    {
+      "title": "Lenny's Podcast",
+      "href": "https://www.lennysnewsletter.com/podcast",
+      "feed": "https://api.substack.com/feed/podcast/10845.rss"
+    }
+  ],
+  "archived": [
+    {
+      "title": "Brydon &amp;",
+      "href": "https://rss.art19.com/brydon"
+    },
+    {
+      "title": "Seth Godin's Startup School",
+      "href": "https://feeds.simplecast.com/gaqbJIYV"
+    },
+    {
+      "title": "ACQ2 by Acquired",
+      "href": "https://feeds.transistor.fm/acq2"
+    },
+    {
+      "title": "Creator Science",
+      "href": "https://feeds.megaphone.fm/TPG4024225475"
+    },
+    {
+      "title": "How I Built This with Guy Raz",
+      "href": "https://rss.art19.com/how-i-built-this"
+    },
+    {
+      "title": "The Generic Foiling Podcast",
+      "href": "https://anchor.fm/s/a86ee904/podcast/rss"
+    },
+    {
+      "title": "Unfunded",
+      "href": "https://feeds.captivate.fm/unfunded-dayone/"
+    },
+    {
+      "title": "The Minefield",
+      "href": "https://www.abc.net.au/feeds/6344904/podcast.xml"
+    },
+    {
+      "title": "Side Project",
+      "href": "https://feeds.transistor.fm/side-project"
+    },
+    {
+      "title": "The Side Hustle Show",
+      "href": "https://rss.introcast.io/655135292/feeds.megaphone.fm/YAP9195874886"
+    },
+    {
+      "title": "Guru: Don't Cross Kat",
+      "href": "https://rss.art19.com/guru"
+    },
+    {
+      "title": "The Startup Retro",
+      "href": "https://feeds.captivate.fm/the-startup-retro-dayone/"
+    },
+    {
+      "title": "Calling Operator",
+      "href": "https://feeds.simplecast.com/R3aVJTaK"
+    },
+    {
+      "title": "FounderQuest",
+      "href": "https://feeds.transistor.fm/founderquest"
+    },
+    {
+      "title": "Software Social",
+      "href": "https://feeds.transistor.fm/software-social"
+    },
+    {
+      "title": "Build Your SaaS",
+      "href": "https://feeds.transistor.fm/build-your-saas"
+    },
+    {
+      "title": "Bootstrapped Web",
+      "href": "https://feeds.transistor.fm/bootstrapped-web"
+    },
+    {
+      "title": "Hackers Incorporated",
+      "href": "https://feeds.transistor.fm/hackers-inc"
+    },
+    {
+      "title": "Product Journey",
+      "href": "https://feeds.transistor.fm/product-journey"
+    }
+  ]
+}

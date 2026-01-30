@@ -1,0 +1,44 @@
+{
+  "links": [
+    {
+      "title": "BBC Radio : Pete Tong",
+      "href": "https://www.bbc.co.uk/programmes/b006ww0v"
+    },
+    {
+      "title": "BBC Radio : Sophie Ellis-Bextor",
+      "href": "https://www.bbc.co.uk/programmes/m000tsg9"
+    },
+    {
+      "title": "BBC Radio : Craig Charles",
+      "href": "https://www.bbc.co.uk/programmes/m000h9wt"
+    },
+    {
+      "title": "Toolroom Radio",
+      "href": "https://portal-api.thisisdistorted.com/xml/toolroom-radio"
+    },
+    {
+      "title": "Eelke Kleijn | Days like Nights",
+      "href": "https://feeds.soundcloud.com/users/soundcloud:users:1525250/sounds.rss"
+    },
+    {
+      "title": "Beach House Podcast",
+      "href": "https://wearebeachhouse.com/xml/beachhouse.xml"
+    },
+    {
+      "title": "Hedkandi Radio",
+      "href": "https://hedkandi.libsyn.com/rss"
+    },
+    {
+      "title": "Nassau Beach Club Ibiza",
+      "href": "https://www.music-zone.es/PodcastNBI/NassauIbiza.xml"
+    },
+    {
+      "title": "House Finesse",
+      "href": "https://feeds.feedburner.com/onephatdj"
+    },
+    {
+      "title": "Defected Radio",
+      "href": "https://portal-api.thisisdistorted.com/xml/defected-in-the-house"
+    }
+  ]
+}

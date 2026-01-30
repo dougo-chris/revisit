@@ -1,0 +1,82 @@
+{
+  "tags": [
+    {
+      "title": "Elixir",
+      "tag": "elixir"
+    },
+    {
+      "title": "CSS",
+      "tag": "css"
+    },
+    {
+      "title": "Ruby",
+      "tag": "ruby"
+    }
+  ],
+  "todo": [
+    {
+      "title": "FolioReady",
+      "tag": "folio-ready"
+    },
+    {
+      "title": "RabbitMQ",
+      "tag": "rabbitmq"
+    },
+    {
+      "title": "Kubernetes",
+      "tag": "kubernetes"
+    },
+    {
+      "title": "OpenTelemetry",
+      "tag": "opentelemetry"
+    },
+    {
+      "title": "Kafka",
+      "tag": "kafka"
+    },
+    {
+      "title": "Protobuf",
+      "tag": "protobuf"
+    },
+    {
+      "title": "GRPC",
+      "tag": "grpc"
+    },
+    {
+      "title": "SNMP",
+      "tag": "snmp"
+    },
+    {
+      "title": "NixOS",
+      "tag": "nixos"
+    },
+    {
+      "title": "Docker",
+      "tag": "docker"
+    },
+    {
+      "title": "MySQL",
+      "tag": "mysql"
+    },
+    {
+      "title": "Postgres",
+      "tag": "postgres"
+    },
+    {
+      "title": "Markdown",
+      "tag": "markdown"
+    },
+    {
+      "title": "Next.JS",
+      "tag": "nextjs"
+    },
+    {
+      "title": "VIM",
+      "tag": "vim"
+    },
+    {
+      "title": "JavaScript",
+      "tag": "javascript"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 {menu.map(({name, href}, index) => (
-                  <NavLink 
+                  <NavLink
                     key={`footer_menu_${index}`}
                     href={href}
                   >
@@ -43,7 +43,7 @@ export function Footer() {
             </p>
           </Container.Inner>
         </div>
-        
+
       </Container.Outer>
     </footer>
   )

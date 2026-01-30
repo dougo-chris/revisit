@@ -1,0 +1,39 @@
+{
+  "links": [
+    {
+      "title": "Fly.io",
+      "href": "https://fly.io",
+      "description": "Web & Application Servers"
+    },
+    {
+      "title": "Amazon : SES",
+      "href": "https://aws.amazon.com/ses/",
+      "description": "Email Sending"
+    },
+    {
+      "title": "Amazon : Cloudfront",
+      "href": "https://aws.amazon.com/cloudfront/",
+      "description": "Asset Caching"
+    },
+    {
+      "title": "Amazon : S3",
+      "href": "https://aws.amazon.com/s3/",
+      "description": "Content Storage"
+    },
+    {
+      "title": "DNSimple",
+      "href": "https://dnsimple.com",
+      "description": "Domain Management"
+    },
+    {
+      "title": "Google Admin",
+      "href": "https://admin.google.com",
+      "description": "Manage Company Users, Emails, Storage, ..."
+    },
+    {
+      "title": "Simple Analytics",
+      "href": "https://www.simpleanalytics.com",
+      "description": "Website analytics"
+    }
+  ]
+}

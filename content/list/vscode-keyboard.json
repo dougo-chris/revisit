@@ -1,0 +1,64 @@
+{
+  "links": [
+    {
+      "title": "cmd+l o",
+      "description": "workbench.action.openWorkspace"
+    },
+    {
+      "title": "cmd+l p",
+      "description": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+      "title": "cmd+k i",
+      "description": "editor.action.trimTrailingWhitespace"
+    },
+    {
+      "title": "cmd+k cmd+x",
+      "description": "-editor.action.trimTrailingWhitespace"
+    },
+    {
+      "title": "cmd+l ;",
+      "description": "editor.action.revealDefinition"
+    },
+    {
+      "title": "f12",
+      "description": "-editor.action.revealDefinition"
+    },
+    {
+      "title": "cmd+l cmd+;",
+      "description": "editor.action.peekDefinition"
+    },
+    {
+      "title": "alt+f12",
+      "description": "-editor.action.peekDefinition"
+    },
+    {
+      "title": "cmd+l k",
+      "description": "revealInExplorer"
+    },
+    {
+      "title": "cmd+k l",
+      "description": "editor.action.transformToLowercase"
+    },
+    {
+      "title": "cmd+k u",
+      "description": "editor.action.transformToUppercase"
+    },
+    {
+      "title": "cmd+l q",
+      "description": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+      "title": "alt+cmd+g",
+      "description": "search.action.focusNextSearchResult"
+    },
+    {
+      "title": "f4",
+      "description": "-search.action.focusNextSearchResult"
+    },
+    {
+      "title": "ctrl+cmd+g",
+      "description": "workbench.view.search.focus"
+    }
+  ]
+}

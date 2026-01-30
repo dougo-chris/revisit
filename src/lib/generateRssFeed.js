@@ -5,7 +5,7 @@ export async function generateRssFeed({ contents }) {
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   let author = {
     name: 'Christopher Douglas',
-    email: 'chrris@folioready.com',
+    email: 'chris@folioready.com',
   }
 
   let feed = new Feed({

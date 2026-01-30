@@ -1,7 +1,7 @@
 import { getContents } from '@/lib/getContent'
 import Developer from '@/pages/developer'
 
-import { tags } from 'content/tags.yaml'
+import { tags } from 'content/tags.json'
 
 export default function DeveloperTag({ tag, contents }) {
   return (

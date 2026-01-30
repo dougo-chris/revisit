@@ -1,0 +1,81 @@
+{
+  "links": [
+    {
+      "title": "Github Copilot",
+      "description": "Tries to help me write code. Not always helpful.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=GitHub.Copilot"
+    },
+    {
+      "title": "Github Copilot Chat",
+      "href": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat"
+    },
+    {
+      "title": "Tailwind CSS IntelliSense",
+      "description": "IntelliSense for Tailwind CSS class names.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+    },
+    {
+      "title": "Headwind",
+      "description": "Opinionated Tailwind CSS class sorter.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=heybourn.headwind"
+    },
+    {
+      "title": "Prettier - Code formatter",
+      "description": "Code formatter for my JS code.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+    },
+    {
+      "title": "Phoenix Framework",
+      "description": "Syntax highlighting and snippets for Phoenix Framework.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=phoenixframework.phoenix"
+    },
+    {
+      "title": "Heex HTML",
+      "description": "Syntax highlighting for HEEx templates.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=Ritvyk.heex-html"
+    },
+    {
+      "title": "ElixirLS",
+      "description": "Elixir Language Server.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=JakeBecker.elixir-ls"
+    },
+    {
+      "title": "Elixir Test",
+      "description": "Jump to the test files",
+      "href": "https://marketplace.visualstudio.com/items?itemName=samuel-pordeus.elixir-test"
+    },
+    {
+      "title": "Trailing Spaces",
+      "description": "Highlights spaces where spaces should not be.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces"
+    },
+    {
+      "title": "Code Spell Checker",
+      "description": "Works well with markdown.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
+    },
+    {
+      "title": "Container Tools",
+      "href": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers"
+    },
+    {
+      "title": "Docker",
+      "href": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"
+    },
+    {
+      "title": "Markdown PDF",
+      "description": "I use markldown a lot. This makes it easy to export and share",
+      "href": "https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf"
+    },
+    {
+      "title": "Draw.io integration",
+      "description": "Create diagrams within Visual Studio Code.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio"
+    },
+    {
+      "title": "Markdown Table Prettifier",
+      "description": "Transforms markdown tables to be more readable.",
+      "href": "https://marketplace.visualstudio.com/items?itemName=darkriszty.markdown-table-prettify"
+    }
+  ]
+}

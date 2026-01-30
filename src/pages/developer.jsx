@@ -4,7 +4,7 @@ import { getContents } from '@/lib/getContent'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { ChevronRightIcon } from '@/components/Icons'
 
-import { tags } from 'content/tags.yaml'
+import { tags } from 'content/tags.json'
 
 function MenuItem({ tag, title, selected }) {
   return (
