@@ -33,6 +33,14 @@
       "description": "Relational database management system"
     },
     {
+      "title": "Postico",
+      "description": "GUI for PostgreSQL"
+    },
+    {
+      "title": "Docker",
+      "description": "Containerization platform"
+    },
+    {
       "title": "Orbstack",
       "description": "Docker alternative for Mac"
     },
@@ -55,6 +63,10 @@
     {
       "title": "asdf",
       "description": "Package manager for multiple programming languages"
+    },
+    {
+      "title": "claude",
+      "description": "My AI assistant"
     }
   ]
 }

@@ -17,7 +17,8 @@
       "Bash(npm uninstall:*)",
       "Bash(kill:*)",
       "Bash(curl:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(npm view:*)"
     ]
   }
 }
