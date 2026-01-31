@@ -27,9 +27,8 @@ This violates DRY principles and makes it difficult to maintain consistent styli
 
 Create a reusable `ListItem` component that encapsulates the shared pattern and can be used across all list pages. The component should:
 
-1. Accept props for all variable content (title, description, date, href, eyebrow)
+1. Accept props for all variable content (title, description, date, href)
 2. Use consistent styling that matches the rest of the design system (zinc colors, not gray)
-3. Support optional eyebrow text for tags/categories
 4. Maintain the current grid layout pattern (date + content columns)
 5. Integrate seamlessly with existing page layouts
 
@@ -42,7 +41,7 @@ Create a reusable `ListItem` component that encapsulates the shared pattern and 
 import Link from 'next/link'
 import { formatDate } from '@/lib/formatDate'
 
-export function ListItem({ title, description, date, href, eyebrow }) {
+export function ListItem({ title, description, date, href }) {
   return (
     <article className="group">
       <Link href={href}>
@@ -53,11 +52,6 @@ export function ListItem({ title, description, date, href, eyebrow }) {
             </time>
           </div>
           <div className="col-span-8">
-            {eyebrow && (
-              <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-100">
-                {eyebrow}
-              </p>
-            )}
             <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
               {title}
             </h2>
@@ -83,12 +77,12 @@ export function ListItem({ title, description, date, href, eyebrow }) {
 **`src/pages/developer/[tag]/index.jsx`**
 - Import ListItem component
 - Replace custom article markup (lines 22-46) with `<ListItem />`
-- Pass props: `title`, `description`, `date`, `href={/developer/${tag}/${slug}}`, `eyebrow={tag}`
+- Pass props: `title`, `description`, `date`, `href={/developer/${tag}/${slug}}`
 
 **`src/pages/list/index.jsx`**
 - Import ListItem component
 - Replace custom article markup (lines 22-38) with `<ListItem />`
-- Pass props: `title`, `description`, `date`, `href={/list/${tag}}`, `eyebrow={tag}`
+- Pass props: `title`, `description`, `date`, `href={/list/${tag}}`
 
 ## Testing
 

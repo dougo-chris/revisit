@@ -30,7 +30,7 @@ export default function List({ links, tag, description }) {
       </Head>
       <SimpleLayout>
         <div className="flex flex-wrap mt-8 md:flex-nowrap">
-          <div className="h-full w-full md:w-[12rem] md:mr-8 md:sticky md:top-32 border-l border-zinc-100 md:pl-3 dark:border-zinc-700">
+          <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32 border-l border-zinc-100 md:pl-3 dark:border-zinc-700">
             {sections.map((section) => (
               <MenuItem
                 key={section.tag}
@@ -52,7 +52,6 @@ export default function List({ links, tag, description }) {
                 title={content.title}
                 description={content.description}
                 href={content.href || '#'}
-                eyebrow={tag}
               />
             ))}
           </div>

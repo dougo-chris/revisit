@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { formatDate } from '@/lib/formatDate'
 import { ChevronRightIcon } from '@/components/Icons'
 
-export function ListItem({ title, description, date, href, eyebrow }) {
+export function ListItem({ title, description, date, href }) {
   return (
     <article className="group">
       <Link href={href}>
@@ -15,11 +15,6 @@ export function ListItem({ title, description, date, href, eyebrow }) {
             </div>
           )}
           <div className={date ? "col-span-8" : "col-span-10"}>
-            {eyebrow && (
-              <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-100">
-                {eyebrow}
-              </p>
-            )}
             <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-500 dark:group-hover:text-teal-400">
               <ChevronRightIcon className="inline-block w-5 h-5 -mt-0.5 stroke-current" />
               {title}
