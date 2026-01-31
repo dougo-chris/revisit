@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { ChevronRightIcon } from '@/components/Icons'
+import { ListItem } from '@/components/ListItem'
 
 import sections from 'content/lists.json'
 
@@ -15,24 +16,6 @@ function MenuItem({ tag, title, current }) {
       {title}
     </a>
   );
-}
-
-function Content({ content }) {
-  return (
-    <article className="group">
-      <a href={content.href}>
-        <div className="grid grid-cols-10 py-3 group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800">
-          <div className="col-span-10 text-sm font-semibold text-zinc-800 lg:col-span-3 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
-            <ChevronRightIcon className="inline-block w-5 h-5 -mt-0.5 stroke-current" />
-            {content.title}
-          </div>
-          <div className="col-span-9 col-start-2 text-xs text-zinc-600 lg:col-span-7 lg:col-start-0 dark:text-zinc-400">
-            {content.description}
-          </div>
-        </div>
-      </a>
-    </article>
- );
 }
 
 export default function List({ links, tag, description }) {
@@ -64,9 +47,12 @@ export default function List({ links, tag, description }) {
               </p>
             )}
             {links.map((content, index) => (
-              <Content
-                key={`link_${content.tag}_${index}`}
-                content={content}
+              <ListItem
+                key={`link_${tag}_${index}`}
+                title={content.title}
+                description={content.description}
+                href={content.href || '#'}
+                eyebrow={tag}
               />
             ))}
           </div>

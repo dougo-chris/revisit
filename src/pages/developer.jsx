@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import { formatDate } from '@/lib/formatDate'
 import { getContents } from '@/lib/getContent'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { ChevronRightIcon } from '@/components/Icons'
+import { ListItem } from '@/components/ListItem'
 
 import { tags } from 'content/tags.json'
 
@@ -17,27 +17,6 @@ function MenuItem({ tag, title, selected }) {
       {title}
     </a>
   );
-}
-
-function Content({ content }) {
-  return (
-    <article className="py-4 group hover:bg-zinc-50 dark:hover:bg-zinc-800">
-      <a href={`/developer/${content.tag}/${content.slug}`}>
-        <h3 className="flex justify-between text-sm font-semibold text-zinc-800 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
-          <span className="ml-2">
-            <ChevronRightIcon className="inline-block w-5 h-5 stroke-current" />
-            {content.title}
-          </span>
-          <span className="mr-2 text-xs text-zinc-500 group-hover:text-teal-500 dark:group-hover:text-teal-400">
-            {formatDate(content.date)}
-          </span>
-        </h3>
-        <p className="ml-8 mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">
-          {content.description}
-        </p>
-      </a>
-    </article>
- );
 }
 
 export default function Developer({ contents, tag }) {
@@ -71,9 +50,13 @@ export default function Developer({ contents, tag }) {
           </div>
           <div className="w-full divide-y divide-zinc-200 md:-mt-2">
             {contents.map((content) => (
-              <Content
+              <ListItem
                 key={content.slug}
-                content={content}
+                title={content.title}
+                description={content.description}
+                date={content.date}
+                href={`/developer/${content.tag}/${content.slug}`}
+                eyebrow={content.tag}
               />
             ))}
           </div>
