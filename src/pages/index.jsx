@@ -105,7 +105,7 @@ export default function Index() {
 }
 
 export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'production' && process.env.GENERATE_RSS === 'true') {
     let contents = await getAllContents()
     await generateRssFeed({ contents })
   }

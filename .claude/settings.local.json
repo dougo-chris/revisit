@@ -18,7 +18,8 @@
       "Bash(timeout 15 npm run dev:*)",
       "Bash(tree:*)",
       "Bash(xargs:*)",
-      "WebSearch(*)"
+      "WebSearch(*)",
+      "Bash(test:*)"
     ]
   }
 }

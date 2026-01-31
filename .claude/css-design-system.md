@@ -272,7 +272,7 @@ active:transition-none  // Removes transition delay on click
 
 ```jsx
 <div className="flex flex-wrap mt-8 md:flex-nowrap">
-  <div className="h-full w-full md:w-[12rem] md:mr-8 md:sticky md:top-32">
+  <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32">
     {/* Sidebar */}
   </div>
   <div className="w-full divide-y divide-zinc-200 md:-mt-2">

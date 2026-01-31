@@ -72,7 +72,6 @@ export function ListItem({ title, description, date, href }) {
 - Import ListItem component
 - Replace custom article markup (lines 9-24) with `<ListItem />`
 - Pass props: `title`, `description`, `date`, `href={/backlog/${slug}}`
-- No eyebrow for backlog items
 
 **`src/pages/developer/[tag]/index.jsx`**
 - Import ListItem component
@@ -105,8 +104,6 @@ export function ListItem({ title, description, date, href }) {
    - Test on desktop - verify spacing and alignment
 
 4. **Content variations**
-   - Pages with eyebrows (developer, list) - verify eyebrow displays
-   - Pages without eyebrows (backlog) - verify no empty space
    - Items with long descriptions - verify text wraps correctly
    - Items with short descriptions - verify spacing remains consistent
 
@@ -123,7 +120,7 @@ export function ListItem({ title, description, date, href }) {
 ### Key Decisions Made
 
 1. **Component API Design**
-   - Props: `{ title, description, date, href, eyebrow }`
+   - Props: `{ title, description, date, href }`
    - Simple, flat prop structure (no nested objects)
    - Eyebrow is optional (undefined = not rendered)
 
@@ -146,7 +143,6 @@ export function ListItem({ title, description, date, href }) {
 
 - **Date formatting**: Ensure `formatDate` utility is imported and available
 - **href construction**: Each page builds hrefs differently (backlog vs developer vs list)
-- **Eyebrow conditional**: Make sure eyebrow doesn't render empty `<p>` tags when undefined
 - **Grid columns**: Mobile behavior may need responsive classes if grid doesn't stack well
 
 ### Alternative Approaches Considered

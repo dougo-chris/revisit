@@ -180,6 +180,22 @@ npm run build
 
 The site is completely static - no server or database required.
 
+### GitHub Pages Deployment
+
+The repository includes a GitHub Actions workflow (`.github/workflows/nextjs.yml`) that automatically deploys to GitHub Pages on push to `main`.
+
+**Environment Variables:**
+The workflow uses the following environment variables:
+- `NEXT_PUBLIC_SITE_URL`: Production site URL (set as GitHub secret or default in workflow)
+- `GENERATE_RSS`: Enable/disable RSS feed generation (set as GitHub secret, defaults to `true`)
+
+**Setup:**
+1. Enable GitHub Pages in repository settings
+2. Set deployment source to "GitHub Actions"
+3. (Optional) Add secrets in Settings → Secrets and variables → Actions:
+   - `NEXT_PUBLIC_SITE_URL`: Your production URL
+   - `GENERATE_RSS`: `true` or `false`
+
 ## RSS Feed Generation
 
 RSS feeds are generated at build time via `/src/lib/generateRssFeed.js`:
@@ -187,6 +203,19 @@ RSS feeds are generated at build time via `/src/lib/generateRssFeed.js`:
 - Only includes `article` and `developer` content types
 - Outputs `/public/rss/feed.xml` and `/public/rss/feed.json`
 - Production builds only
+- **Controlled by environment variable**: Set `GENERATE_RSS=true` in `.env.local` to enable
+
+**To enable RSS generation:**
+```bash
+# In .env.local
+GENERATE_RSS=true
+```
+
+**To disable RSS generation (default):**
+```bash
+# In .env.local
+GENERATE_RSS=false
+```
 
 ## Color Customization
 
