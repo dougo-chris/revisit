@@ -11,7 +11,7 @@ function MenuItem({ tag, title, selected }) {
     <a
       href={tag ? `/developer/${tag}` : '/developer'}
       aria-selected={selected ? 'true' : 'false'}
-      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-gray-100 aria-selected:text-teal-500 aria-selected:dark:text-teal-400"
+      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-zinc-100 aria-selected:text-teal-500 aria-selected:dark:text-teal-400"
     >
       <ChevronRightIcon className="inline-block w-5 h-5 mt-0.5 stroke-current" />
       {title}
@@ -21,18 +21,18 @@ function MenuItem({ tag, title, selected }) {
 
 function Content({ content }) {
   return (
-    <article className="py-4 group hover:bg-gray-50 dark:hover:bg-zinc-800">
+    <article className="py-4 group hover:bg-zinc-50 dark:hover:bg-zinc-800">
       <a href={`/developer/${content.tag}/${content.slug}`}>
-        <h3 className="flex justify-between text-sm font-semibold text-gray-800 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
+        <h3 className="flex justify-between text-sm font-semibold text-zinc-800 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
           <span className="ml-2">
             <ChevronRightIcon className="inline-block w-5 h-5 stroke-current" />
             {content.title}
           </span>
-          <span className="mr-2 text-xs text-gray-500 group-hover:text-teal-500 dark:group-hover:text-teal-400">
+          <span className="mr-2 text-xs text-zinc-500 group-hover:text-teal-500 dark:group-hover:text-teal-400">
             {formatDate(content.date)}
           </span>
         </h3>
-        <p className="ml-8 mt-0.5 text-sm text-gray-600 dark:text-gray-400">
+        <p className="ml-8 mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">
           {content.description}
         </p>
       </a>
@@ -69,7 +69,7 @@ export default function Developer({ contents, tag }) {
               />
             ))}
           </div>
-          <div className="w-full mt-8 divide-y divide-gray-200 md:-mt-2">
+          <div className="w-full divide-y divide-zinc-200 md:-mt-2">
             {contents.map((content) => (
               <Content
                 key={content.slug}

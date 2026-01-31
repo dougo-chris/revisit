@@ -94,7 +94,7 @@ export function MermaidDiagram({ children }) {
   if (!svg) {
     return (
       <div className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-zinc-900">
-        <p className="text-sm text-gray-500 dark:text-gray-400">Loading diagram...</p>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">Loading diagram...</p>
       </div>
     )
   }

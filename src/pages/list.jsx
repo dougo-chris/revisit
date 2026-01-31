@@ -9,7 +9,7 @@ function MenuItem({ tag, title, current }) {
     <a
       href={`/list/${tag}`}
       aria-selected={current ? 'true' : 'false'}
-      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-gray-100 aria-selected:text-teal-500 aria-selected:dark:text-teal-400"
+      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-zinc-100 aria-selected:text-teal-500 aria-selected:dark:text-teal-400"
     >
       <ChevronRightIcon className="inline-block w-5 h-5 mt-0.5 stroke-current" />
       {title}
@@ -21,12 +21,12 @@ function Content({ content }) {
   return (
     <article className="group">
       <a href={content.href}>
-        <div className="grid grid-cols-10 py-3 group-hover:bg-gray-50 dark:group-hover:bg-zinc-800">
-          <div className="col-span-10 text-sm font-semibold text-gray-800 lg:col-span-3 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
+        <div className="grid grid-cols-10 py-3 group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800">
+          <div className="col-span-10 text-sm font-semibold text-zinc-800 lg:col-span-3 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400">
             <ChevronRightIcon className="inline-block w-5 h-5 -mt-0.5 stroke-current" />
             {content.title}
           </div>
-          <div className="col-span-9 col-start-2 text-xs text-gray-600 lg:col-span-7 lg:col-start-0 dark:text-gray-400">
+          <div className="col-span-9 col-start-2 text-xs text-zinc-600 lg:col-span-7 lg:col-start-0 dark:text-zinc-400">
             {content.description}
           </div>
         </div>
@@ -57,9 +57,9 @@ export default function List({ links, tag, description }) {
               />
             ))}
           </div>
-          <div className="w-full mt-8 divide-y divide-gray-200 md:-mt-2">
+          <div className="w-full mt-8 divide-y divide-zinc-200 md:-mt-2">
             {description && (
-              <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
+              <p className="mb-2 text-sm text-zinc-600 dark:text-zinc-400">
                 {description}
               </p>
             )}
