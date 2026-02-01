@@ -12,7 +12,7 @@ This hierarchy shows what motivates employees, from bottom to top:
 - Can be 90% of the pyramid in some industries/roles
 - Just because it's at the base doesn't mean it's not the dominant part
 
-**Middle: Recognition** 
+**Middle: Recognition**
 - Acknowledgment of contributions
 - Feeling valued and seen
 
@@ -50,7 +50,7 @@ Chip described how this pyramid led to a major strategic shift at Airbnb:
 
 This realization that the **unrecognized need** was "belonging anywhere" (not just accommodation) became:
 - An organizing principle for host training
-- The foundation for marketing/advertising strategy  
+- The foundation for marketing/advertising strategy
 - A competitive advantage ("hotels are not everywhere, but homes are")
 
 ## The Power of Hierarchies

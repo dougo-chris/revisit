@@ -37,6 +37,7 @@ Your markdown content here...
 **Critical rules:**
 - Files must be directly in the content type directory (flat structure, no subdirectories)
 - Filename format: `001-slug-name.md` → becomes `/type/001-slug-name`
+- **Sequential numbering:** Always use the next sequential number (check existing files first)
 - Content is always sorted reverse-chronologically by date
 - For `developer/` content, the tag must match exactly what's in `tags.json`
 
@@ -97,11 +98,16 @@ graph TD
 
 ### Create a New Article
 
-1. Create `content/article/XXX-title.md` with frontmatter
-2. Article appears at `/article/XXX-title`
+1. Check the last numbered article to determine the next sequential number
+2. Create `content/article/XXX-title.md` with frontmatter
+3. Article appears at `/article/XXX-title`
 
 **Example:**
 ```bash
+# Find the highest numbered file
+ls content/article/ | sort | tail -1
+# If last file is 002-something.md, use 003
+
 # Create the file
 touch content/article/003-my-new-article.md
 ```
@@ -119,11 +125,16 @@ Your content here...
 ### Create a New Developer Guide
 
 1. Add tag to `content/tags.json` if it doesn't exist
-2. Create `content/developer/XXX-title.md` with frontmatter including `tag: "yourtag"`
-3. Guide appears at `/developer/yourtag/XXX-title`
+2. Check the last numbered developer guide to determine the next sequential number
+3. Create `content/developer/XXX-title.md` with frontmatter including `tag: "yourtag"`
+4. Guide appears at `/developer/yourtag/XXX-title`
 
 **Example:**
 ```bash
+# Find the highest numbered file
+ls content/developer/ | sort | tail -1
+# If last file is 004-something.md, use 005
+
 # Create the file
 touch content/developer/005-elixir-tips.md
 ```
@@ -174,15 +185,24 @@ Create `content/list/tools.json`:
 ### Draft Content
 
 - Place in `content/_backlog/` - visible in dev mode only
-- Move to published directory when ready
+- Backlog items should also use sequential numbering
+- When publishing, renumber to fit the target directory's sequence
 
 **Example:**
 ```bash
-# Create draft
-touch content/_backlog/draft-article.md
+# Find the highest numbered backlog item
+ls content/_backlog/ | sort | tail -1
+# If last file is 032-something.md, use 033
 
-# When ready to publish
-mv content/_backlog/draft-article.md content/article/004-published-article.md
+# Create draft
+touch content/_backlog/033-draft-article.md
+
+# When ready to publish, check the target directory sequence
+ls content/article/ | sort | tail -1
+# If last article is 003-something.md, use 004
+
+# Move and renumber
+mv content/_backlog/033-draft-article.md content/article/004-published-article.md
 ```
 
 ## Adding New Tags
