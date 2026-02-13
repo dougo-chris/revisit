@@ -4,3 +4,7 @@
 
 /node_modules
 /_temp
+
+.claude/skills
+
+/content/_backlog/**/*.md
