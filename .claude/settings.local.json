@@ -19,7 +19,11 @@
       "Bash(tree:*)",
       "Bash(xargs:*)",
       "WebSearch(*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "WebFetch(domain:www.lennysnewsletter.com)",
+      "WebFetch(domain:100mba.net)",
+      "Bash(node:*)",
+      "Bash(git mv:*)"
     ]
   }
 }
