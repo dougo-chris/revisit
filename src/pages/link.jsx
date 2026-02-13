@@ -3,12 +3,12 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { ChevronRightIcon } from '@/components/Icons'
 import { ListItem } from '@/components/ListItem'
 
-import sections from 'content/lists.json'
+import sections from 'content/links.json'
 
 function MenuItem({ tag, title, current }) {
   return (
     <a
-      href={`/list/${tag}`}
+      href={`/link/${tag}`}
       aria-selected={current ? 'true' : 'false'}
       className="flex w-full p-1 text-sm tracking-tight font-base dark:text-neutral-100 aria-selected:text-blue-500 aria-selected:dark:text-blue-400"
     >
@@ -40,12 +40,7 @@ export default function List({ links, tag, description }) {
               />
             ))}
           </div>
-          <div className="w-full mt-8 divide-y divide-neutral-200 md:-mt-2">
-            {description && (
-              <p className="mb-2 text-sm text-neutral-600 dark:text-neutral-400">
-                {description}
-              </p>
-            )}
+          <div className="w-full mt-8 divide-y divide-neutral-100 dark:divide-neutral-800/10 md:-mt-2">
             {links.map((content, index) => (
               <ListItem
                 key={`link_${tag}_${index}`}
@@ -63,7 +58,7 @@ export default function List({ links, tag, description }) {
 
 export async function getStaticProps() {
   const section = sections[0]
-  const { links } = await import(`content/list/${section.tag}.json`);
+  const { links } = await import(`content/link/${section.tag}.json`);
 
   return {
     props: {

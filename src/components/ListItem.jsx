@@ -19,7 +19,7 @@ export function ListItem({ title, description, date, href }) {
               <ChevronRightIcon className="inline-block w-5 h-5 -mt-0.5 stroke-current" />
               {title}
             </h2>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            <p className="ml-6 text-sm text-neutral-600 dark:text-neutral-400">
               {description}
             </p>
           </div>

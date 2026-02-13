@@ -1,6 +1,6 @@
-import List from '@/pages/list'
+import List from '@/pages/link'
 
-import sections from 'content/lists.json'
+import sections from 'content/links.json'
 
 export default function ListTag({ links, tag, description }) {
   return (
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 export async function getStaticProps({ params }) {
   const { tag } = params;
   const section = sections.find(section => section.tag === tag);
-  const { links } = await import(`content/list/${tag}.json`);
+  const { links } = await import(`content/link/${tag}.json`);
 
   return {
     props: {

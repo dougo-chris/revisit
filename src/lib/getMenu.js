@@ -9,8 +9,8 @@ export function getMenu() {
       href: '/developer',
     },
     {
-      name: 'Lists',
-      href: '/list',
+      name: 'Links',
+      href: '/link',
     },
     {
       name: 'Work',

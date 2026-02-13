@@ -1,20 +1,21 @@
 import Head from 'next/head'
 import { getContents } from '@/lib/getContent'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { ChevronRightIcon } from '@/components/Icons'
-import { ListItem } from '@/components/ListItem'
+import { Content } from '@/components/Content'
 
 import { tags } from 'content/tags.json'
 
-function MenuItem({ tag, title, selected }) {
+function TabItem({ tag, title, selected }) {
   return (
     <a
       href={tag ? `/developer/${tag}` : '/developer'}
       aria-selected={selected ? 'true' : 'false'}
-      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-neutral-100 aria-selected:text-blue-500 aria-selected:dark:text-blue-400"
+      className="relative px-4 py-2 text-sm font-medium transition whitespace-nowrap aria-selected:text-blue-600 dark:aria-selected:text-blue-500 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200"
     >
-      <ChevronRightIcon className="inline-block w-5 h-5 mt-0.5 stroke-current" />
       {title}
+      {selected && (
+        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-500" />
+      )}
     </a>
   );
 }
@@ -30,34 +31,32 @@ export default function Developer({ contents, tag }) {
         />
       </Head>
       <SimpleLayout>
-        <div className="flex flex-wrap mt-8 md:flex-nowrap">
-          <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32 border-l border-neutral-100 md:pl-3 dark:border-neutral-700">
-            <MenuItem
-              key='everything'
-              tag={null}
-              title="Everything"
-              selected={'everything' == tag}
-            />
+        <div className="mt-8">
+          <div className="border-b border-neutral-200 dark:border-neutral-700">
+            <nav className="flex justify-end -mb-px overflow-x-auto">
+              <TabItem
+                key='everything'
+                tag={null}
+                title="Everything"
+                selected={'everything' == tag}
+              />
 
-            {tags.map((item) => (
-              <MenuItem
-                key={item.tag}
-                tag={item.tag}
-                title={item.title}
-                selected={item.tag == tag}
-              />
-            ))}
+              {tags.map((item) => (
+                <TabItem
+                  key={item.tag}
+                  tag={item.tag}
+                  title={item.title}
+                  selected={item.tag == tag}
+                />
+              ))}
+            </nav>
           </div>
-          <div className="w-full divide-y divide-neutral-200 md:-mt-2">
-            {contents.map((content) => (
-              <ListItem
-                key={content.slug}
-                title={content.title}
-                description={content.description}
-                date={content.date}
-                href={`/developer/${content.tag}/${content.slug}`}
-              />
-            ))}
+          <div className="mt-8">
+            <div className="flex flex-col max-w-4xl">
+              {contents.map((content) => (
+                <Content key={content.slug} content={content} />
+              ))}
+            </div>
           </div>
         </div>
       </SimpleLayout>

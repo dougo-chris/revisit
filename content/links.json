@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Developer",
+    "description": "My Development setup and tools I use to build FolioReady.",
+    "tag": "developer"
+  },
+  {
+    "title": "Elixir",
+    "description": "These are libraries I use in my Elixir projects. FolioReady is built with Elixir and Phoenix.",
+    "tag": "elixir"
+  },
+  {
+    "title": "Infrastructure",
+    "description": "Here's what I use in hosting FolioReady.",
+    "tag": "infrastructure"
+  }
+]

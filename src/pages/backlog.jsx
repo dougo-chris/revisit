@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { ListItem } from '@/components/ListItem'
-
+import { Content } from '@/components/Content'
 import { getContents } from '@/lib/getContent'
 
 export default function Backlog({ contents }) {
@@ -15,16 +14,10 @@ export default function Backlog({ contents }) {
         />
       </Head>
       <SimpleLayout>
-        <div className="flex flex-wrap md:flex-nowrap">
-          <div className="w-full divide-y divide-zinc-200 md:-mt-2">
-            {contents.map((content, index) => (
-              <ListItem
-                key={`backlog_${content.tag}_${index}`}
-                title={content.title}
-                description={content.description}
-                date={content.date}
-                href={`/backlog/${content.slug}`}
-              />
+        <div>
+          <div className="flex flex-col max-w-4xl">
+            {contents.map((content) => (
+              <Content key={content.slug} content={content} />
             ))}
           </div>
         </div>
