@@ -11,7 +11,7 @@ function MenuItem({ tag, title, selected }) {
     <a
       href={tag ? `/developer/${tag}` : '/developer'}
       aria-selected={selected ? 'true' : 'false'}
-      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-zinc-100 aria-selected:text-teal-500 aria-selected:dark:text-teal-400"
+      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-neutral-100 aria-selected:text-blue-500 aria-selected:dark:text-blue-400"
     >
       <ChevronRightIcon className="inline-block w-5 h-5 mt-0.5 stroke-current" />
       {title}
@@ -31,7 +31,7 @@ export default function Developer({ contents, tag }) {
       </Head>
       <SimpleLayout>
         <div className="flex flex-wrap mt-8 md:flex-nowrap">
-          <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32 border-l border-zinc-100 md:pl-3 dark:border-zinc-700">
+          <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32 border-l border-neutral-100 md:pl-3 dark:border-neutral-700">
             <MenuItem
               key='everything'
               tag={null}
@@ -48,7 +48,7 @@ export default function Developer({ contents, tag }) {
               />
             ))}
           </div>
-          <div className="w-full divide-y divide-zinc-200 md:-mt-2">
+          <div className="w-full divide-y divide-neutral-200 md:-mt-2">
             {contents.map((content) => (
               <ListItem
                 key={content.slug}

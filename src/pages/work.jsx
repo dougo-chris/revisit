@@ -68,26 +68,26 @@ function Resume() {
   const resume = getResume();
 
   return (
-    <div className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <div className="p-6 border rounded-lg border-neutral-100 dark:border-neutral-700/40">
+      <h2 className="flex text-sm font-semibold text-neutral-900 dark:text-neutral-100">
         <BriefcaseIcon className="flex-none w-6 h-6" />
         <span className="ml-3">Work History</span>
       </h2>
-      <ol className="mt-6 space-y-2 divide-y divide-zinc-100">
+      <ol className="mt-6 space-y-2 divide-y divide-neutral-100">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4 pt-2 first:pt-0">
             <dl className="flex flex-wrap flex-auto gap-x-2">
               <dt className="sr-only">Company</dt>
-              <dd className="flex-none w-full text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <dd className="flex-none w-full text-sm font-medium text-neutral-900 dark:text-neutral-100">
                 {role.company}
               </dd>
               <dt className="sr-only">Role</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+              <dd className="text-xs text-neutral-500 dark:text-neutral-400">
                 {role.title}
               </dd>
               <dt className="sr-only">Date</dt>
               <dd
-                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+                className="ml-auto text-xs text-neutral-400 dark:text-neutral-500"
                 aria-label={`${role.start} until ${role.end}`}
               >
                 <span>
@@ -101,7 +101,7 @@ function Resume() {
               { role.detail && (
                 <>
                   <dt className="sr-only">Detail</dt>
-                  <dd className="flex-none w-full ml-1 text-xs text-zinc-500 dark:text-zinc-400">
+                  <dd className="flex-none w-full ml-1 text-xs text-neutral-500 dark:text-neutral-400">
                     {role.detail}
                   </dd>
                 </>
@@ -129,10 +129,10 @@ export default function Work() {
       <Container className="mt-8 sm:mt-16">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+            <h1 className="text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 sm:text-4xl">
               {work.heading}
             </h1>
-            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 text-base space-y-7 text-neutral-600 dark:text-neutral-400">
               {work.details.map((detail, index) => (
                 <p key={index}>{detail}</p>
               ))}

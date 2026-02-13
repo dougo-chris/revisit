@@ -10,7 +10,7 @@ function MenuItem({ tag, title, current }) {
     <a
       href={`/list/${tag}`}
       aria-selected={current ? 'true' : 'false'}
-      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-zinc-100 aria-selected:text-teal-500 aria-selected:dark:text-teal-400"
+      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-neutral-100 aria-selected:text-blue-500 aria-selected:dark:text-blue-400"
     >
       <ChevronRightIcon className="inline-block w-5 h-5 mt-0.5 stroke-current" />
       {title}
@@ -30,7 +30,7 @@ export default function List({ links, tag, description }) {
       </Head>
       <SimpleLayout>
         <div className="flex flex-wrap mt-8 md:flex-nowrap">
-          <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32 border-l border-zinc-100 md:pl-3 dark:border-zinc-700">
+          <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32 border-l border-neutral-100 md:pl-3 dark:border-neutral-700">
             {sections.map((section) => (
               <MenuItem
                 key={section.tag}
@@ -40,9 +40,9 @@ export default function List({ links, tag, description }) {
               />
             ))}
           </div>
-          <div className="w-full mt-8 divide-y divide-zinc-200 md:-mt-2">
+          <div className="w-full mt-8 divide-y divide-neutral-200 md:-mt-2">
             {description && (
-              <p className="mb-2 text-sm text-zinc-600 dark:text-zinc-400">
+              <p className="mb-2 text-sm text-neutral-600 dark:text-neutral-400">
                 {description}
               </p>
             )}

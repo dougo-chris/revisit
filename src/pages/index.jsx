@@ -33,9 +33,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="flex text-sm font-medium transition group text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+        className="flex text-sm font-medium transition group text-neutral-800 hover:text-blue-500 dark:text-neutral-200 dark:hover:text-blue-400"
       >
-        <Icon className="flex-none w-6 h-6 transition fill-zinc-500 group-hover:fill-teal-500" />
+        <Icon className="flex-none w-6 h-6 transition fill-neutral-500 group-hover:fill-blue-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -53,7 +53,7 @@ function Social() {
       <SocialLink
         href="mailto:chris@folioready.com"
         icon={MailIcon}
-        className="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-700/40"
+        className="pt-8 mt-8 border-t border-neutral-100 dark:border-neutral-700/40"
       >
         chris@folioready.com
       </SocialLink>
@@ -81,15 +81,15 @@ export default function Index() {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="object-cover aspect-square rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
+                className="object-cover aspect-square rotate-3 rounded-lg bg-neutral-100 dark:bg-neutral-800"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+            <h1 className="text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 sm:text-4xl">
               {index.heading}
             </h1>
-            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 text-base space-y-7 text-neutral-600 dark:text-neutral-400">
               {index.details.map((detail, index) => (
                 <p key={index}>{detail}</p>
               ))}

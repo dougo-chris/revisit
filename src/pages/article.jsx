@@ -50,7 +50,7 @@ export default function Article({ contents }) {
         />
       </Head>
       <SimpleLayout>
-        <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700">
+        <div className="md:border-l md:border-neutral-100 md:pl-6 md:dark:border-neutral-700">
           <div className="flex flex-col max-w-4xl space-y-8">
             {contents.map((content) => (
               <Content key={content.slug} content={content} />
