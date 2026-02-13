@@ -9,9 +9,13 @@ async function getContentMeta(type, filename) {
   const matterResult = matter(fileContent);
   const slug = filename.replace(/\.md$/, '')
 
+  // Ensure date is always a string (gray-matter can parse dates as Date objects)
+  const date = matterResult.data.date
+  const dateString = date instanceof Date ? date.toISOString().split('T')[0] : (date || '2020-01-01')
+
   return {
     title: matterResult.data.title || slug,
-    date: matterResult.data.date || '2020-01-01',
+    date: dateString,
     description: matterResult.data.description || slug,
     tag: matterResult.data.tag || 'general',
     type: type,
@@ -48,9 +52,13 @@ export async function getContent(type, slug) {
   const fileContent = fs.readFileSync(basePath, 'utf8');
   const matterResult = matter(fileContent);
 
+  // Ensure date is always a string (gray-matter can parse dates as Date objects)
+  const date = matterResult.data.date
+  const dateString = date instanceof Date ? date.toISOString().split('T')[0] : (date || '2020-01-01')
+
   return {
     title: matterResult.data.title || slug,
-    date: matterResult.data.date || '2020-01-01',
+    date: dateString,
     description: matterResult.data.description || '',
     tag: matterResult.data.tag || 'general',
     type: type,
