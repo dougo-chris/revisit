@@ -20,14 +20,17 @@
     "feed": "^5.2.0",
     "focus-visible": "^5.2.0",
     "gray-matter": "^4.0.3",
+    "lucide-react": "^0.564.0",
     "mermaid": "^10.9.5",
     "next": "^16.1.6",
     "postcss-focus-visible": "^11.0.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-markdown": "^10.1.0",
+    "refractor": "^5.0.0",
     "remark-gfm": "^4.0.1",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
     "eslint": "^9.39.2",

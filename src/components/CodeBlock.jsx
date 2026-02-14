@@ -1,4 +1,5 @@
 import { MermaidDiagram } from './MermaidDiagram'
+import { InfographicBlock } from './Infographic'
 
 // Helper to extract text content from React children
 function getTextContent(children) {
@@ -18,7 +19,9 @@ function getTextContent(children) {
 }
 
 export function CodeBlock({ node, inline, className, children, ...props }) {
-  const match = /language-(\w+)/.exec(className || '')
+  // Handle className as string or array
+  const classNameStr = Array.isArray(className) ? className.join(' ') : (className || '')
+  const match = /language-(\w+)/.exec(classNameStr)
   const language = match ? match[1] : null
 
   // Only process block-level code (not inline code)
@@ -27,23 +30,40 @@ export function CodeBlock({ node, inline, className, children, ...props }) {
     return <MermaidDiagram>{code}</MermaidDiagram>
   }
 
+  // Handle infographic types
+  if (!inline && ['stat-block', 'timeline', 'comparison-table', 'progress-bar'].includes(language)) {
+    const code = getTextContent(children).trim()
+    return <InfographicBlock language={language}>{code}</InfographicBlock>
+  }
+
+  // Filter out the node prop to avoid serialization issues
+  const { node: _, ...validProps } = { node, ...props }
+
   return (
-    <code className={className} {...props}>
+    <code className={className} {...validProps}>
       {children}
     </code>
   )
 }
 
-export function PreBlock({ children, ...props }) {
-  // Check if this pre contains a mermaid code block
-  if (children && children.props && children.props.className) {
-    const match = /language-(\w+)/.exec(children.props.className || '')
-    if (match && match[1] === 'mermaid') {
+export function PreBlock({ children, node, ...props }) {
+  // Check if this pre contains a mermaid or infographic code block
+  if (children && typeof children === 'object') {
+    const childProps = children.props || {}
+    const className = childProps.className
+
+    // Handle className as string or array
+    const classNameStr = Array.isArray(className) ? className.join(' ') : (className || '')
+
+    const match = /language-(\w+)/.exec(classNameStr)
+    const infographicTypes = ['mermaid', 'stat-block', 'timeline', 'comparison-table', 'progress-bar']
+
+    if (match && infographicTypes.includes(match[1])) {
       // Return just the code block component, unwrapped from pre
       return children
     }
   }
 
-  // For all other code blocks, return the pre wrapper
+  // For all other code blocks, return the pre wrapper (without node prop)
   return <pre {...props}>{children}</pre>
 }

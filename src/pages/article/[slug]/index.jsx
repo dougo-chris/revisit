@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import rehypePrism from '@mapbox/rehype-prism'
+import rehypePrismCustom from '@/lib/rehype-prism-custom'
 
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { getContents, getContent } from '@/lib/getContent'
@@ -19,7 +19,7 @@ export default function ArticleSlug({ content, previousPathname }) {
       >
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypePrism]}
+          rehypePlugins={[rehypePrismCustom]}
           components={{
             pre: PreBlock,
             code: CodeBlock,
