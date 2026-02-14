@@ -42,10 +42,39 @@ const iconMap = {
 
 // StatBlock Component - Display key metrics with trend indicators
 function StatBlock({ data }) {
-  const stats = Array.isArray(data) ? data : [data]
+  // Handle both array format and object with columns property
+  let stats, columns
+
+  if (Array.isArray(data)) {
+    stats = data
+    columns = null
+  } else if (data.stats && Array.isArray(data.stats)) {
+    // Object format with columns property: { columns: 2, stats: [...] }
+    stats = data.stats
+    columns = data.columns
+  } else {
+    // Single stat object
+    stats = [data]
+    columns = data.columns
+  }
+
+  // Build responsive grid classes based on columns setting
+  let gridClasses = 'my-6 grid grid-cols-1 gap-4'
+  if (columns === 1) {
+    gridClasses = 'my-6 grid grid-cols-1 gap-4'
+  } else if (columns === 2) {
+    gridClasses = 'my-6 grid grid-cols-1 gap-4 sm:grid-cols-2'
+  } else if (columns === 3) {
+    gridClasses = 'my-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'
+  } else if (columns === 4) {
+    gridClasses = 'my-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+  } else {
+    // Default: auto-responsive (1→2→3→4)
+    gridClasses = 'my-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+  }
 
   return (
-    <div className="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className={gridClasses}>
       {stats.map((stat, index) => {
         const IconComponent = stat.icon ? iconMap[stat.icon] : null
         let TrendIcon = null
@@ -65,7 +94,7 @@ function StatBlock({ data }) {
         return (
           <div
             key={index}
-            className="rounded-lg border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-zinc-900"
+            className="overflow-hidden rounded-lg border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-zinc-900"
           >
             {IconComponent && (
               <div className="mb-3">
@@ -73,23 +102,23 @@ function StatBlock({ data }) {
               </div>
             )}
             {stat.title && (
-              <div className="text-sm font-medium text-neutral-600 transition hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400">
+              <div className="break-words text-sm font-medium text-neutral-600 transition hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400">
                 {stat.title}
               </div>
             )}
-            <div className="mt-2 flex items-baseline gap-2">
-              <div className="text-3xl font-semibold text-neutral-900 dark:text-neutral-100">
+            <div className="mt-2 flex flex-wrap items-baseline gap-2">
+              <div className="break-words text-3xl font-semibold text-neutral-900 dark:text-neutral-100">
                 {stat.value}
               </div>
               {stat.change && TrendIcon && (
                 <div className={`flex items-center gap-1 text-sm font-medium ${trendColor}`}>
-                  <TrendIcon className="h-4 w-4" />
-                  <span>{stat.change}</span>
+                  <TrendIcon className="h-4 w-4 flex-shrink-0" />
+                  <span className="break-words">{stat.change}</span>
                 </div>
               )}
             </div>
             {stat.description && (
-              <div className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <div className="mt-1 break-words text-sm text-neutral-600 dark:text-neutral-400">
                 {stat.description}
               </div>
             )}
@@ -142,19 +171,19 @@ function Timeline({ data }) {
               </div>
 
               {/* Content */}
-              <div className="flex-1 pb-2">
+              <div className="flex-1 pb-2 overflow-hidden">
                 {item.date && (
-                  <div className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
+                  <div className="break-words text-sm font-medium text-neutral-600 dark:text-neutral-400">
                     {item.date}
                   </div>
                 )}
                 {item.title && (
-                  <div className="mt-1 text-base font-semibold text-neutral-900 transition hover:text-blue-500 dark:text-neutral-100 dark:hover:text-blue-400">
+                  <div className="mt-1 break-words text-base font-semibold text-neutral-900 transition hover:text-blue-500 dark:text-neutral-100 dark:hover:text-blue-400">
                     {item.title}
                   </div>
                 )}
                 {item.description && (
-                  <div className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  <div className="mt-1 break-words text-sm text-neutral-600 dark:text-neutral-400">
                     {item.description}
                   </div>
                 )}
@@ -180,7 +209,7 @@ function ComparisonTable({ data }) {
     <div className="my-6 overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700">
       {data.title && (
         <div className="border-b border-neutral-200 bg-neutral-50 px-6 py-4 dark:border-neutral-700 dark:bg-zinc-800">
-          <h3 className="text-lg font-semibold text-neutral-900 transition hover:text-blue-500 dark:text-neutral-100 dark:hover:text-blue-400">
+          <h3 className="break-words text-lg font-semibold text-neutral-900 transition hover:text-blue-500 dark:text-neutral-100 dark:hover:text-blue-400">
             {data.title}
           </h3>
         </div>
@@ -192,7 +221,7 @@ function ComparisonTable({ data }) {
               {data.headers.map((header, index) => (
                 <th
                   key={index}
-                  className="px-6 py-3 text-left text-sm font-semibold text-neutral-900 dark:text-neutral-100"
+                  className="break-words px-6 py-3 text-left text-sm font-semibold text-neutral-900 dark:text-neutral-100"
                 >
                   {header}
                 </th>
@@ -202,11 +231,11 @@ function ComparisonTable({ data }) {
           <tbody className="divide-y divide-neutral-200 bg-white dark:divide-neutral-700 dark:bg-zinc-900">
             {data.rows.map((row, rowIndex) => (
               <tr key={rowIndex}>
-                <td className="px-6 py-4 text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                <td className="break-words px-6 py-4 text-sm font-medium text-neutral-900 dark:text-neutral-100">
                   {row.feature}
                 </td>
                 {row.values.map((value, valueIndex) => (
-                  <td key={valueIndex} className="px-6 py-4 text-sm text-neutral-600 dark:text-neutral-400">
+                  <td key={valueIndex} className="break-words px-6 py-4 text-sm text-neutral-600 dark:text-neutral-400">
                     {typeof value === 'boolean' ? (
                       value ? (
                         <Check className="h-5 w-5 text-green-600 dark:text-green-400" />
@@ -248,15 +277,15 @@ function ProgressBar({ data }) {
         }
 
         return (
-          <div key={index} className="rounded-lg border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-zinc-900">
-            <div className="mb-2 flex items-center justify-between">
+          <div key={index} className="overflow-hidden rounded-lg border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-zinc-900">
+            <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
               {bar.title && (
-                <div className="text-sm font-medium text-neutral-900 transition hover:text-blue-500 dark:text-neutral-100 dark:hover:text-blue-400">
+                <div className="break-words text-sm font-medium text-neutral-900 transition hover:text-blue-500 dark:text-neutral-100 dark:hover:text-blue-400">
                   {bar.title}
                 </div>
               )}
               {bar.showPercentage && (
-                <div className="text-sm font-semibold text-neutral-600 dark:text-neutral-400">
+                <div className="flex-shrink-0 text-sm font-semibold text-neutral-600 dark:text-neutral-400">
                   {progress}%
                 </div>
               )}
@@ -268,7 +297,7 @@ function ProgressBar({ data }) {
               />
             </div>
             {bar.label && (
-              <div className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+              <div className="mt-2 break-words text-sm text-neutral-600 dark:text-neutral-400">
                 {bar.label}
               </div>
             )}

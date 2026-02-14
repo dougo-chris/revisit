@@ -21,7 +21,7 @@ function getTextContent(children) {
 export function CodeBlock({ node, inline, className, children, ...props }) {
   // Handle className as string or array
   const classNameStr = Array.isArray(className) ? className.join(' ') : (className || '')
-  const match = /language-(\w+)/.exec(classNameStr)
+  const match = /language-([\w-]+)/.exec(classNameStr)
   const language = match ? match[1] : null
 
   // Only process block-level code (not inline code)
@@ -55,7 +55,7 @@ export function PreBlock({ children, node, ...props }) {
     // Handle className as string or array
     const classNameStr = Array.isArray(className) ? className.join(' ') : (className || '')
 
-    const match = /language-(\w+)/.exec(classNameStr)
+    const match = /language-([\w-]+)/.exec(classNameStr)
     const infographicTypes = ['mermaid', 'stat-block', 'timeline', 'comparison-table', 'progress-bar']
 
     if (match && infographicTypes.includes(match[1])) {
