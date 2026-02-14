@@ -1,72 +1,12 @@
 import Head from 'next/head'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 import { Container } from '@/components/Container'
 import { BriefcaseIcon } from '@/components/Icons'
+import { getPageContent, getResume } from '@/lib/getContent'
 
-function getWork() {
-  return {
-    heading:'Software Engineer & Founder.',
-    details: [
-      'I\'m a seasoned software developer based in Melbourne, Australia.',
-      'For the last 5 years I\'ve worked on large scale backend systems that process millions of records and are critical to maintaining network availability',
-      'I\'m also the founder of Folioready, a SAAS that help companies get documents from their clients.',
-      'Previously I was the first employee for a startup building recommendations engines used by online music and video services.' +
-        ' The company was sold to Microsoft where I continued to work for a number of years.',
-      'I\'m a hands on developer, with startup experience, who leads teams by being with them in doing the work.'
-    ]
-  }
-}
-
-function getResume() {
-  return [
-    {
-      company: 'FolioReady',
-      title: 'Founder & CEO',
-      start: '2025',
-      end: 'Present',
-    },
-    {
-      company: 'InvestorHub',
-      title: 'Senior Platform Engineer',
-      start: '2026',
-      end: 'Present',
-    },
-    {
-      company: 'Telstra',
-      title: 'Senior Software Developer',
-      start: '2017',
-      end: '2026',
-    },
-    {
-      company: 'Property1View',
-      title: 'Technical Lead',
-      start: '2015',
-      end: '2016',
-    },
-    {
-      company: 'Adyotta',
-      title: 'Technical Lead',
-      start: '2014',
-      end: '2015',
-    },
-    {
-      company: 'Telstra',
-      title: 'Technical Lead',
-      start: '2014',
-      end: '2014',
-    },
-    {
-      company: 'Sensis',
-      title: 'Technical Lead',
-      start: '2012',
-      end: '2014',
-    },
-  ]
-}
-
-function Resume() {
-  const resume = getResume();
-
+function Resume({ resume }) {
   return (
     <div className="p-6 border rounded-lg border-neutral-100 dark:border-neutral-700/40">
       <h2 className="flex text-sm font-semibold text-neutral-900 dark:text-neutral-100">
@@ -114,35 +54,42 @@ function Resume() {
   )
 }
 
-export default function Work() {
-  const work = getWork();
-
+export default function Work({ content, resume }) {
   return (
     <>
       <Head>
         <title>Work History - Christopher Douglas</title>
         <meta
           name="description"
-          content={`Chris Douglas : ${work.heading}`}
+          content={`Chris Douglas : ${content.heading}`}
         />
       </Head>
       <Container className="mt-8 sm:mt-16">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 sm:text-4xl">
-              {work.heading}
-            </h1>
-            <div className="mt-6 text-base space-y-7 text-neutral-600 dark:text-neutral-400">
-              {work.details.map((detail, index) => (
-                <p key={index}>{detail}</p>
-              ))}
+            <div className="prose dark:prose-invert prose-headings:text-neutral-800 dark:prose-headings:text-neutral-100 prose-a:text-blue-500 dark:prose-a:text-blue-400 prose-h1:text-3xl prose-h1:font-bold prose-h1:tracking-tight sm:prose-h1:text-4xl">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {content.content}
+              </ReactMarkdown>
             </div>
           </div>
           <div className="lg:pl-20">
-            <Resume />
+            <Resume resume={resume} />
           </div>
         </div>
       </Container>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const content = await getPageContent('work')
+  const resume = await getResume()
+
+  return {
+    props: {
+      content,
+      resume,
+    },
+  }
 }

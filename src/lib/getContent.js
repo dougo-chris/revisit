@@ -66,3 +66,22 @@ export async function getContent(type, slug) {
     content: matterResult.content,
   }
 }
+
+export async function getPageContent(filename) {
+  const basePath = path.join(process.cwd(), `./content/${filename}.md`)
+  const fileContent = fs.readFileSync(basePath, 'utf8');
+  const matterResult = matter(fileContent);
+
+  return {
+    title: matterResult.data.title || filename,
+    heading: matterResult.data.heading || '',
+    content: matterResult.content,
+    ...matterResult.data,
+  }
+}
+
+export async function getResume() {
+  const basePath = path.join(process.cwd(), './content/work.json')
+  const fileContent = fs.readFileSync(basePath, 'utf8');
+  return JSON.parse(fileContent);
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "company": "FolioReady",
+    "title": "Founder & CEO",
+    "start": "2025",
+    "end": "Present"
+  },
+  {
+    "company": "InvestorHub",
+    "title": "Senior Platform Engineer",
+    "start": "2026",
+    "end": "Present"
+  },
+  {
+    "company": "Telstra",
+    "title": "Senior Software Developer",
+    "start": "2017",
+    "end": "2026"
+  },
+  {
+    "company": "Property1View",
+    "title": "Technical Lead",
+    "start": "2015",
+    "end": "2016"
+  },
+  {
+    "company": "Adyotta",
+    "title": "Technical Lead",
+    "start": "2014",
+    "end": "2015"
+  },
+  {
+    "company": "Telstra",
+    "title": "Technical Lead",
+    "start": "2014",
+    "end": "2014"
+  },
+  {
+    "company": "Sensis",
+    "title": "Technical Lead",
+    "start": "2012",
+    "end": "2014"
+  }
+]
