@@ -29,7 +29,15 @@
       "Bash(open:*)",
       "WebFetch(domain:www.growthunhinged.com)",
       "Bash(grep:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(magick:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:media.beehiiv.com)",
+      "Bash(brew info:*)",
+      "Bash(brew list:*)",
+      "Bash(echo:*)",
+      "mcp__image-gen__generate_images"
     ]
   }
 }
