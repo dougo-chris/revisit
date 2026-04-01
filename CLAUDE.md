@@ -118,7 +118,7 @@ border-zinc-100 dark:border-zinc-700/40  // Borders
 ### Commit Workflow
 
 1. Make all code changes
-2. Run tests, credo, and format check to verify
+2. Run `npm run lint`, `npx prettier --check .`, and `npm run build` to verify
 3. Stage specific files and commit with a descriptive message
 
 ### Commit Message Format
