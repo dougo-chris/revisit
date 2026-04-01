@@ -1,5 +1,5 @@
 /.next
-/out
+/dist
 .env*
 
 /node_modules
