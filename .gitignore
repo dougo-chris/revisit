@@ -1,5 +1,5 @@
 /.next
-/out
+/dist
 .env*
 
 /node_modules
@@ -8,3 +8,6 @@
 .claude/skills
 
 /content/_backlog/**/*.md
+
+# CLAUDE
+.claude/settings.local.json
