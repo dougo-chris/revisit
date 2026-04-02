@@ -73,7 +73,7 @@ This is the ONLY content type with 3-level routing. The tag is part of the URL p
 **Key conventions:**
 - Underscore prefix (`_backlog`) hides directories from production menu
 - Only `article` and `developer` content included in RSS feeds
-- Filename format: `001-slug-name.md` — sequential numbering, becomes the URL slug
+- Filename format: `YYYY-MM-DD-slug-name.md` — date-based naming, becomes the URL slug
 - Content sorted reverse-chronologically by date
 - For `developer/` content, `tag` in frontmatter must match `tags.json`
 - Never add trailing periods in frontmatter fields
