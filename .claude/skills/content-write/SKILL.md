@@ -63,6 +63,20 @@ description: "One sentence description — no trailing period"
 - No trailing periods in frontmatter fields
 - If developer content, ensure the `tag` matches an entry in `content/tags.json`
 
+**Conversational format:**
+
+Articles are built from the real conversations that happened during research and refine — not written as traditional essays. The spec's `## Conversation Beats` section has the key moments to work from.
+
+Two approaches (or blend both):
+- **Edited conversation** — The key beats of the real exchange, shaped for readability. Not a raw transcript, but the moments where the idea evolved: pivots, surprises, the user's actual words. Edited for clarity and pace
+- **Dual voice** — The user's reflections and questions interleaved with AI research and responses. Two perspectives, clearly attributed. The user brings lived experience; the AI brings research and structure
+
+Either way:
+- Preserve the user's actual phrasing where it captures something genuine — don't polish away the personality
+- Let research surface naturally within the conversation, not as a separate citations section
+- Show the idea evolving — the final take should feel earned, not declared
+- The reader should feel like they're overhearing a real conversation that goes somewhere interesting
+
 ### 4. Move the spec to done
 
 - Move the spec file from `.spec/` to `.spec/done/`

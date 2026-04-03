@@ -58,6 +58,16 @@ When the user signals they're done (e.g., "done", "let's wrap up", "that's good"
 4. Push the branch
 5. Create a PR with a summary of what changed and key decisions made
 
+## Conversational content
+
+The final article will be built from these conversations — an edited dialogue or dual voice piece, not a traditional essay. This refine phase is part of the raw material.
+
+- Track the key moments: pivots, surprises, disagreements, breakthroughs. These become the structure of the final piece
+- When the user says something that captures the idea better than the spec does, note it — their actual words often become the best lines in the article
+- The refine conversation should feel like two people genuinely exploring an idea, because that's exactly what the reader will see
+
+When updating the spec, add a `## Conversation Beats` section that captures the moments worth preserving for the write phase — the real exchanges that show the idea evolving.
+
 ## Important
 
 - Do NOT write the actual article — this is discussion and planning only

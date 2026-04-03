@@ -93,6 +93,14 @@ Create `.spec/YYYY-MM-DD-topic-slug.md` with this structure:
 - Body should summarize the research findings and suggested angle
 - PR is for the user to review before moving to the refine phase
 
+## Conversational content
+
+The content this site produces is conversational — it comes from the real exchange between the user and AI during research and refine. Think of this chat as the raw material for the final piece, not just a planning step.
+
+- During research, note the moments where the idea evolves — a pivot, a surprise, a question that changed direction. These are the beats that make the final piece real
+- The spec should capture the arc of exploration, not just the conclusions
+- Include the user's actual words and reactions where they reveal something genuine about the topic
+
 ## Important
 
 - Do NOT write the actual article — this is research and planning only
