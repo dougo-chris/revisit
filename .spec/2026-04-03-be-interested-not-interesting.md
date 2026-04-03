@@ -49,26 +49,46 @@ Be interested not interesting
 
 ## Suggested Angle
 
-**Personal story: AI made me more interested, not more interesting.** The piece is anchored in the author's own experience — using AI hasn't been about producing impressive output, it's been about exploring new ideas and learning how to ask better questions. AI became a curiosity engine, not a content factory.
+**The article IS the conversation.** Not a polished essay about curiosity — the actual exchange between a person and an AI exploring this idea together. It started with "pick a random backlog item," became research, then the human read the outline and said "the real angle is that AI made me more curious," then said "what if the content was our discussion?" Each step demonstrates the principle it's describing.
 
-The honest admission — "I'm not sure anyone else would find this interesting" — IS the point. That's the principle in action. You're not performing curiosity for an audience, you're genuinely following threads because they fascinate you. Carnegie's 90-year-old advice lands differently when you've lived it through a conversation with an LLM.
+### Format: Edited Conversation / Dual Voice
 
-Write this first-person, practitioner voice. Not a psychology lecture. The research supports the story but doesn't lead it. The Harvard study and neuroscience are proof points, not the hook. The hook is: I started using AI and it made me a better question-asker.
+Two formats to try — may blend both:
 
-## Draft Outline
+**Edited conversation** — The key beats of the real exchange, shaped into a readable flow. Not a raw transcript, but the moments where the idea evolved: the random pick, the research dump, the pivot, the realization. Edited for clarity and pace, but preserving the authentic back-and-forth.
 
-1. **Opening** — The moment you realized AI was making you more curious, not more productive. You started asking it questions you'd never have asked a person, and it changed how you think about conversations
-2. **The old advice** — Carnegie's principle, briefly. It's endured 90 years because it's true. But it always felt like networking advice — something you perform. Until now
-3. **AI as curiosity engine** — What actually happened when you started using AI. Not generating content — exploring ideas. Following threads. Learning to ask better questions. The surprise wasn't the answers, it was discovering what you were interested in
-4. **The science (brief)** — Harvard's question-asking study and the neuroscience. People get a dopamine hit when you let them talk. But the flip side: you get something too — asking good questions rewires how you think
-5. **The paradox** — "I'm not sure anyone else would find this interesting" — and that's the point. Kashdan's research: curious people are rated MORE interesting. You become interesting by not trying to be
-6. **What it looks like in practice** — How this curiosity carries over: in meetings, in code reviews, in conversations. Asking "what problem are you actually solving?" instead of leading with what you know
-7. **The limits** — You still need to contribute, not just ask. It's rhythm — curiosity and competence. Reciprocal exchange, not interrogation
-8. **Close** — AI can be endlessly "interesting." It can't be genuinely interested. That's still yours
+**Dual voice** — Jerry's reflections and questions interleaved with the AI's research and responses. Two perspectives on the same idea, clearly attributed. Jerry brings the lived experience and instinct; the AI brings the research and structure. The reader sees curiosity from both sides.
+
+### What makes this work
+
+- **It's honest.** There was no thesis when this started. A random backlog item became something real through conversation
+- **It's meta.** An article about being interested that shows being interested in action
+- **It shows the process.** Most AI content hides the collaboration. This makes it the point
+- **"I'm not sure anyone else would find this interesting"** — that line stays. It's the heart of the piece. Curiosity isn't performance
+
+### The arc of the conversation
+
+1. "Pick a random backlog item" — no agenda, just curiosity
+2. AI returns a one-liner: "Be interested not interesting"
+3. Research phase — Carnegie, Harvard studies, neuroscience, the whole landscape
+4. Jerry reads the outline, says: the angle isn't Carnegie. It's that AI made ME more interested. I'm learning to ask better questions
+5. The pivot — this isn't a generic advice piece. It's personal
+6. "What if the content was our discussion?" — the final turn. The conversation about curiosity became an act of curiosity
+7. The research weaves in naturally — not as citations but as things that came up while we were talking
+8. Close — AI can be endlessly "interesting." It can't be genuinely interested. That's still yours
+
+### Research integration
+
+Don't present research as a separate section. Let it surface naturally within the conversation:
+- Carnegie comes up when discussing where the phrase originated
+- The Harvard question-asking study lands when talking about why follow-up questions matter
+- The neuroscience fits when explaining why it feels good to be asked about yourself
+- Kashdan's paradox is the punchline: being interested makes you more interesting
 
 ## Open Questions
 
-- What specific AI exploration moment to use in the opening? A real example would anchor it
-- How much of the research to include vs. keeping it tight and personal?
-- Length target: ~800 words feels right for the site's style
-- Drop the power dynamics counterargument — it dilutes the personal thread
+- How much to edit vs. preserve the raw feel? Too polished kills the authenticity, too raw loses the reader
+- Should we include the actual typos/energy from the original messages? ("i'm not sure if anyone else would be interested, but im learning how to ask questions") — there's something real in that
+- Attribution format: how to visually distinguish Jerry's voice from the AI's? Initials, bold/italic, indentation?
+- Length: the conversation format may run longer than 800 words — is ~1200 ok?
+- Title: keep "Be Interested, Not Interesting" or something that signals the format? e.g. "Be Interested, Not Interesting: A Conversation"
