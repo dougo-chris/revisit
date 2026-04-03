@@ -49,26 +49,26 @@ Be interested not interesting
 
 ## Suggested Angle
 
-The hook is the **AI tension**. In 2026, "being interesting" — having facts, articulate responses, polished content — is a commodity. Anyone can generate impressive-sounding output with AI. What's scarce is genuine human curiosity. The ability to ask the right question is now worth more than having the right answer.
+**Personal story: AI made me more interested, not more interesting.** The piece is anchored in the author's own experience — using AI hasn't been about producing impressive output, it's been about exploring new ideas and learning how to ask better questions. AI became a curiosity engine, not a content factory.
 
-But there's a paradox worth exploring: the entire creator economy and LinkedIn culture rewards broadcasting (being interesting), while the research overwhelmingly shows that curiosity (being interested) builds stronger relationships and better outcomes. Most professionals know this instinctively but still default to "impressive mode" in meetings, networking events, and online.
+The honest admission — "I'm not sure anyone else would find this interesting" — IS the point. That's the principle in action. You're not performing curiosity for an audience, you're genuinely following threads because they fascinate you. Carnegie's 90-year-old advice lands differently when you've lived it through a conversation with an LLM.
 
-Write this from personal experience as a builder/developer. Keep it practical — not a psychology lecture but a reflection on what actually works when you stop trying to impress people. The Carnegie reference is the anchor, the Harvard research is the proof, and the AI angle is what makes it timely.
+Write this first-person, practitioner voice. Not a psychology lecture. The research supports the story but doesn't lead it. The Harvard study and neuroscience are proof points, not the hook. The hook is: I started using AI and it made me a better question-asker.
 
 ## Draft Outline
 
-1. **Opening** — A moment where you caught yourself in "impressive mode" and it fell flat. Or watching someone do it. The instinct to lead with credentials
-2. **The Carnegie principle** — The original idea and why it's endured for 90 years. Brief, not a book report
-3. **The science** — The Harvard question-asking study and the neuroscience of self-disclosure. People literally get a dopamine hit when you let them talk about themselves. Keep this tight — two studies, not a literature review
-4. **The paradox** — Kashdan's finding that curious people are rated as MORE interesting. You become interesting by not trying to be
-5. **Why it's hard in practice** — The pressure to prove yourself (especially in tech). Social media rewards broadcasting. AI makes "interesting" a commodity. The real-world pull toward self-promotion
-6. **What it looks like in practice** — Concrete examples: in meetings, in networking, in hiring conversations, in code reviews. What questions to ask. How to listen like a trampoline (Zenger & Folkman)
-7. **The limits** — You still need competence. You still need to share. It's about rhythm, not suppression. Reciprocal exchange, not one-sided inquiry
-8. **Close** — In an age where AI can be endlessly "interesting," genuine human curiosity is the scarce resource. The question you ask matters more than the answer you give
+1. **Opening** — The moment you realized AI was making you more curious, not more productive. You started asking it questions you'd never have asked a person, and it changed how you think about conversations
+2. **The old advice** — Carnegie's principle, briefly. It's endured 90 years because it's true. But it always felt like networking advice — something you perform. Until now
+3. **AI as curiosity engine** — What actually happened when you started using AI. Not generating content — exploring ideas. Following threads. Learning to ask better questions. The surprise wasn't the answers, it was discovering what you were interested in
+4. **The science (brief)** — Harvard's question-asking study and the neuroscience. People get a dopamine hit when you let them talk. But the flip side: you get something too — asking good questions rewires how you think
+5. **The paradox** — "I'm not sure anyone else would find this interesting" — and that's the point. Kashdan's research: curious people are rated MORE interesting. You become interesting by not trying to be
+6. **What it looks like in practice** — How this curiosity carries over: in meetings, in code reviews, in conversations. Asking "what problem are you actually solving?" instead of leading with what you know
+7. **The limits** — You still need to contribute, not just ask. It's rhythm — curiosity and competence. Reciprocal exchange, not interrogation
+8. **Close** — AI can be endlessly "interesting." It can't be genuinely interested. That's still yours
 
 ## Open Questions
 
-- How much personal anecdote to include? The site's voice is practitioner-first — should lead with own experience rather than Carnegie
-- Should this reference AI explicitly or keep it as subtext?
-- Length target: ~800 words feels right for the site's style, but the research could push it longer
-- Consider whether to include the power dynamics counterargument or if it dilutes the piece
+- What specific AI exploration moment to use in the opening? A real example would anchor it
+- How much of the research to include vs. keeping it tight and personal?
+- Length target: ~800 words feels right for the site's style
+- Drop the power dynamics counterargument — it dilutes the personal thread
