@@ -1,6 +1,6 @@
 # Be Interested, Not Interesting
 
-## Status: Research
+## Status: Ready to Write
 
 ## Original Idea
 
@@ -85,10 +85,30 @@ Don't present research as a separate section. Let it surface naturally within th
 - The neuroscience fits when explaining why it feels good to be asked about yourself
 - Kashdan's paradox is the punchline: being interested makes you more interesting
 
+## Decisions
+
+- **Format**: Edited conversation / dual voice blend — the article is the conversation, not an essay about it
+- **Angle**: AI made Jerry more interested, not more interesting. He's exploring ideas and learning to ask better questions. The piece demonstrates what it's about
+- **The meta layer**: An article about being interested that was created by being interested. "Pick a random backlog item" became this
+- **Research integration**: No separate citations section. Carnegie, Harvard studies, neuroscience surface naturally as things that came up while talking
+- **The refine happened organically**: The research-to-refine conversation was itself the content being refined. No separate refine step needed — the real discussion was the refine
+- **Skill updates**: All three content skills now support conversational format as the default. Research tracks conversation moments, refine captures beats, write produces dialogue-based pieces
+
+## Conversation Beats
+
+These are the real moments from the conversation to build the piece from:
+
+1. **"Pick a random backlog item"** — No plan, no agenda. Pure curiosity. AI picks from 90+ items at random
+2. **A one-liner**: The backlog item is literally just "Be interested not interesting" — nothing else
+3. **The research dump**: Carnegie, Harvard, neuroscience, Nadella, Terry Gross — a wall of findings. Thorough but generic
+4. **The pivot**: Jerry reads the outline and says the angle isn't Carnegie. "AI has made me more interested in what I can do. Exploring new ideas. I'm not sure if anyone else would be interested, but I'm learning how to ask questions"
+5. **"What if the content was our discussion?"** — The turn that changed everything. Not a generic piece, but what we actually said to each other in exploring the ideas
+6. **"Edited conversation or dual voice"** — Jerry picks the format without hesitation
+7. **The skill update detour**: A misunderstanding leads to updating the content skills — the conversation format becomes the default for all future content, not just this piece
+8. **"Sounds like we just did the refine step"** — The meta moment. The conversation about how to write the conversation was itself the refine step. The process proved the thesis
+
 ## Open Questions
 
-- How much to edit vs. preserve the raw feel? Too polished kills the authenticity, too raw loses the reader
-- Should we include the raw energy from the original messages? There's something real in the unpolished phrasing — "I'm not sure if anyone else would be interested, but I'm learning how to ask questions"
-- Attribution format: how to visually distinguish Jerry's voice from the AI's? Initials, bold/italic, indentation?
-- Length: the conversation format may run longer than 800 words — is ~1200 ok?
-- Title: keep "Be Interested, Not Interesting" or something that signals the format? e.g. "Be Interested, Not Interesting: A Conversation"
+- Attribution format: how to visually distinguish Jerry's voice from the AI's? Initials, bold/italic, blockquotes?
+- Length: ~1200 words feels right for the conversation format
+- Title: keep "Be Interested, Not Interesting" or signal the format?
