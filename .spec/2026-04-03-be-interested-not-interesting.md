@@ -71,9 +71,9 @@ Two formats to try — may blend both:
 1. "Pick a random backlog item" — no agenda, just curiosity
 2. AI returns a one-liner: "Be interested not interesting"
 3. Research phase — Carnegie, Harvard studies, neuroscience, the whole landscape
-4. Jerry reads the outline, says: the angle isn't Carnegie. It's that AI made ME more interested. I'm learning to ask better questions
+4. Jerry reads the outline, says: the angle is that AI has made me more interested in what I can do, exploring new ideas. I'm not sure if anyone else would be interested, but I'm learning how to ask questions
 5. The pivot — this isn't a generic advice piece. It's personal
-6. "What if the content was our discussion?" — the final turn. The conversation about curiosity became an act of curiosity
+6. "What if the content was our discussion? Not a generic piece, but what we said to each other in exploring the ideas" — the final turn. The conversation about curiosity became an act of curiosity
 7. The research weaves in naturally — not as citations but as things that came up while we were talking
 8. Close — AI can be endlessly "interesting." It can't be genuinely interested. That's still yours
 
@@ -88,7 +88,7 @@ Don't present research as a separate section. Let it surface naturally within th
 ## Open Questions
 
 - How much to edit vs. preserve the raw feel? Too polished kills the authenticity, too raw loses the reader
-- Should we include the actual typos/energy from the original messages? ("i'm not sure if anyone else would be interested, but im learning how to ask questions") — there's something real in that
+- Should we include the raw energy from the original messages? There's something real in the unpolished phrasing — "I'm not sure if anyone else would be interested, but I'm learning how to ask questions"
 - Attribution format: how to visually distinguish Jerry's voice from the AI's? Initials, bold/italic, indentation?
 - Length: the conversation format may run longer than 800 words — is ~1200 ok?
 - Title: keep "Be Interested, Not Interesting" or something that signals the format? e.g. "Be Interested, Not Interesting: A Conversation"
