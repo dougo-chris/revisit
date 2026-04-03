@@ -1,6 +1,6 @@
 # Be Interested, Not Interesting
 
-## Status: Ready to Write
+## Status: Research
 
 ## Original Idea
 
