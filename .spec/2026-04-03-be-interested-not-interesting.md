@@ -57,7 +57,7 @@ Two formats to try — may blend both:
 
 **Edited conversation** — The key beats of the real exchange, shaped into a readable flow. Not a raw transcript, but the moments where the idea evolved: the random pick, the research dump, the pivot, the realization. Edited for clarity and pace, but preserving the authentic back-and-forth.
 
-**Dual voice** — Jerry's reflections and questions interleaved with the AI's research and responses. Two perspectives on the same idea, clearly attributed. Jerry brings the lived experience and instinct; the AI brings the research and structure. The reader sees curiosity from both sides.
+**Dual voice** — Chris's reflections and questions interleaved with the AI's research and responses. Two perspectives on the same idea, clearly attributed. Chris brings the lived experience and instinct; the AI brings the research and structure. The reader sees curiosity from both sides.
 
 ### What makes this work
 
@@ -71,7 +71,7 @@ Two formats to try — may blend both:
 1. "Pick a random backlog item" — no agenda, just curiosity
 2. AI returns a one-liner: "Be interested not interesting"
 3. Research phase — Carnegie, Harvard studies, neuroscience, the whole landscape
-4. Jerry reads the outline, says: the angle is that AI has made me more interested in what I can do, exploring new ideas. I'm not sure if anyone else would be interested, but I'm learning how to ask questions
+4. Chris reads the outline, says: the angle is that AI has made me more interested in what I can do, exploring new ideas. I'm not sure if anyone else would be interested, but I'm learning how to ask questions
 5. The pivot — this isn't a generic advice piece. It's personal
 6. "What if the content was our discussion? Not a generic piece, but what we said to each other in exploring the ideas" — the final turn. The conversation about curiosity became an act of curiosity
 7. The research weaves in naturally — not as citations but as things that came up while we were talking
@@ -88,7 +88,7 @@ Don't present research as a separate section. Let it surface naturally within th
 ## Decisions
 
 - **Format**: Edited conversation / dual voice blend — the article is the conversation, not an essay about it
-- **Angle**: AI made Jerry more interested, not more interesting. He's exploring ideas and learning to ask better questions. The piece demonstrates what it's about
+- **Angle**: AI made Chris more interested, not more interesting. He's exploring ideas and learning to ask better questions. The piece demonstrates what it's about
 - **The meta layer**: An article about being interested that was created by being interested. "Pick a random backlog item" became this
 - **Research integration**: No separate citations section. Carnegie, Harvard studies, neuroscience surface naturally as things that came up while talking
 - **The refine happened organically**: The research-to-refine conversation was itself the content being refined. No separate refine step needed — the real discussion was the refine
@@ -101,14 +101,14 @@ These are the real moments from the conversation to build the piece from:
 1. **"Pick a random backlog item"** — No plan, no agenda. Pure curiosity. AI picks from 90+ items at random
 2. **A one-liner**: The backlog item is literally just "Be interested not interesting" — nothing else
 3. **The research dump**: Carnegie, Harvard, neuroscience, Nadella, Terry Gross — a wall of findings. Thorough but generic
-4. **The pivot**: Jerry reads the outline and says the angle isn't Carnegie. "AI has made me more interested in what I can do. Exploring new ideas. I'm not sure if anyone else would be interested, but I'm learning how to ask questions"
+4. **The pivot**: Chris reads the outline and says the angle isn't Carnegie. "AI has made me more interested in what I can do. Exploring new ideas. I'm not sure if anyone else would be interested, but I'm learning how to ask questions"
 5. **"What if the content was our discussion?"** — The turn that changed everything. Not a generic piece, but what we actually said to each other in exploring the ideas
-6. **"Edited conversation or dual voice"** — Jerry picks the format without hesitation
+6. **"Edited conversation or dual voice"** — Chris picks the format without hesitation
 7. **The skill update detour**: A misunderstanding leads to updating the content skills — the conversation format becomes the default for all future content, not just this piece
 8. **"Sounds like we just did the refine step"** — The meta moment. The conversation about how to write the conversation was itself the refine step. The process proved the thesis
 
 ## Open Questions
 
-- Attribution format: how to visually distinguish Jerry's voice from the AI's? Initials, bold/italic, blockquotes?
+- Attribution format: how to visually distinguish Chris's voice from the AI's? Initials, bold/italic, blockquotes?
 - Length: ~1200 words feels right for the conversation format
 - Title: keep "Be Interested, Not Interesting" or signal the format?
