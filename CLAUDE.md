@@ -107,6 +107,15 @@ bg-zinc-50 dark:bg-zinc-800           // Subtle background
 border-zinc-100 dark:border-zinc-700/40  // Borders
 ```
 
+## Conversational Content
+
+Articles are built from real conversations between Chris and AI — not written as traditional essays. The exchange during research and refine is the raw material for the final piece.
+
+- **Edited conversation**: Key beats of the real exchange, shaped for readability. Not a transcript, but the moments where the idea evolved — pivots, surprises, actual words
+- **Dual voice**: Chris's reflections and questions interleaved with AI research and responses. Two perspectives, clearly attributed
+
+During research and refine, track the real moments — Chris's actual phrasing, direction changes, breakthroughs. These become the structure of the article. Let research surface naturally within the dialogue, not as a separate citations section. Don't hide the AI collaboration; make it the point.
+
 ## Git
 
 ### Branching
