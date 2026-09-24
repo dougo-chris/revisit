@@ -22,20 +22,20 @@ export function MermaidDiagram({ children }) {
           startOnLoad: false,
           theme: 'base',
           themeVariables: {
-            primaryColor: isDark ? '#2dd4bf' : '#0d9488',
-            primaryTextColor: isDark ? '#fafafa' : '#18181b',
-            primaryBorderColor: isDark ? '#0d9488' : '#0f766e',
-            lineColor: isDark ? '#71717a' : '#a1a1aa',
-            secondaryColor: isDark ? '#3f3f46' : '#f4f4f5',
-            tertiaryColor: isDark ? '#27272a' : '#fafafa',
-            background: isDark ? '#18181b' : '#ffffff',
-            mainBkg: isDark ? '#27272a' : '#fafafa',
-            secondBkg: isDark ? '#3f3f46' : '#f4f4f5',
-            tertiaryBkg: isDark ? '#52525b' : '#e4e4e7',
-            textColor: isDark ? '#fafafa' : '#18181b',
-            border1: isDark ? '#52525b' : '#d4d4d8',
-            border2: isDark ? '#71717a' : '#a1a1aa',
-            arrowheadColor: isDark ? '#71717a' : '#a1a1aa',
+            primaryColor: isDark ? '#60a5fa' : '#2563eb',
+            primaryTextColor: isDark ? '#f9fafb' : '#111827',
+            primaryBorderColor: isDark ? '#2563eb' : '#3843d0',
+            lineColor: isDark ? '#6b7280' : '#9ca3af',
+            secondaryColor: isDark ? '#374151' : '#f3f4f6',
+            tertiaryColor: isDark ? '#1f2937' : '#f9fafb',
+            background: isDark ? '#111827' : '#ffffff',
+            mainBkg: isDark ? '#1f2937' : '#f9fafb',
+            secondBkg: isDark ? '#374151' : '#f3f4f6',
+            tertiaryBkg: isDark ? '#4b5563' : '#e5e7eb',
+            textColor: isDark ? '#f9fafb' : '#111827',
+            border1: isDark ? '#4b5563' : '#d1d5db',
+            border2: isDark ? '#6b7280' : '#9ca3af',
+            arrowheadColor: isDark ? '#6b7280' : '#9ca3af',
             fontFamily: 'ui-sans-serif, system-ui, sans-serif',
             fontSize: '16px',
           },
@@ -85,7 +85,7 @@ export function MermaidDiagram({ children }) {
         </p>
         <details className="mt-2">
           <summary className="cursor-pointer text-xs">View source</summary>
-          <pre className="mt-2 text-xs overflow-x-auto">{children}</pre>
+          <pre className="mt-2 overflow-x-auto text-xs">{children}</pre>
         </details>
       </div>
     )
@@ -93,8 +93,10 @@ export function MermaidDiagram({ children }) {
 
   if (!svg) {
     return (
-      <div className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-zinc-900">
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Loading diagram...</p>
+      <div className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-neutral-900">
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          Loading diagram...
+        </p>
       </div>
     )
   }
@@ -102,7 +104,7 @@ export function MermaidDiagram({ children }) {
   return (
     <div
       ref={containerRef}
-      className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-zinc-900"
+      className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-neutral-900"
       dangerouslySetInnerHTML={{ __html: svg }}
     />
   )

@@ -1,5 +1,5 @@
 ---
-title: "Work"
+title: 'Work'
 ---
 
 # Software Engineer & Founder

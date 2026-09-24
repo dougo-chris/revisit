@@ -15,7 +15,7 @@ export default function Backlog({ contents }) {
       </Head>
       <SimpleLayout>
         <div>
-          <div className="flex flex-col max-w-4xl">
+          <div className="flex max-w-4xl flex-col">
             {contents.map((content) => (
               <Content key={content.slug} content={content} />
             ))}

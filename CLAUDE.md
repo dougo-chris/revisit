@@ -4,10 +4,10 @@ A statically-generated Next.js blog/portfolio site based on the Tailwind UI "Spo
 
 ## Technologies
 
-- **Next.js 15** - Framework (configured for static export)
-- **React 18** - UI library
-- **Tailwind CSS 4** - Styling
-- **ReactMarkdown** - Markdown rendering (with remark-gfm, rehype-prism)
+- **Next.js 16** - Framework (Pages Router, configured for static export)
+- **React 19** - UI library
+- **Tailwind CSS 4** - Styling (`src/styles/tailwind.css` loads `tailwind.config.js` via `@config`)
+- **ReactMarkdown** - Markdown rendering (with remark-gfm and a custom refractor-based Prism plugin)
 - **gray-matter** - Frontmatter parsing
 - **fast-glob** - File discovery
 - **@headlessui/react** - Accessible UI components
@@ -71,6 +71,7 @@ This is the ONLY content type with 3-level routing. The tag is part of the URL p
 ```
 
 **Key conventions:**
+
 - Underscore prefix (`_backlog`) hides directories from production menu
 - Only `article` and `developer` content included in RSS feeds
 - Filename format: `YYYY-MM-DD-slug-name.md` — date-based naming, becomes the URL slug
@@ -81,30 +82,31 @@ This is the ONLY content type with 3-level routing. The tag is part of the URL p
 **Content loading** is in `/src/lib/getContent.js`:
 
 ```javascript
-getContent(type, slug)   // Single item with frontmatter + body
-getContents(type)        // All items of a type (metadata only)
-getAllContents()          // article + developer only (for RSS)
+getContent(type, slug) // Single item with frontmatter + body
+getContents(type) // All items of a type (metadata only)
+getAllContents() // article + developer only (for RSS)
 ```
 
 ## CSS Design Rules
 
-**Neutral colors:** Use `zinc-*` for all neutrals. **Never use `gray-*` utilities.**
+**Neutral colors:** Use `neutral-*` for all neutrals. **Never use `gray-*` or `zinc-*` utilities.**
 
-**Accent color:** Use `teal-500` in light mode, `teal-400` in dark mode.
+**Accent color:** Use `blue-500` in light mode, `blue-400` in dark mode. `blue-600` for accent fills. Custom values live in `tailwind.config.js`.
 
 ```jsx
 // Standard accent pattern
-className="text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+className =
+  'text-neutral-800 hover:text-blue-500 dark:text-neutral-200 dark:hover:text-blue-400'
 ```
 
 **Dark mode:** Always pair light and dark mode utilities:
 
 ```jsx
-text-zinc-800 dark:text-zinc-100      // Primary text
-text-zinc-600 dark:text-zinc-400      // Secondary text
-bg-white dark:bg-zinc-900             // Page background
-bg-zinc-50 dark:bg-zinc-800           // Subtle background
-border-zinc-100 dark:border-zinc-700/40  // Borders
+text-neutral-800 dark:text-neutral-100      // Primary text
+text-neutral-600 dark:text-neutral-400      // Secondary text
+bg-white dark:bg-neutral-900                // Page background
+bg-neutral-50 dark:bg-neutral-800           // Subtle background
+border-neutral-100 dark:border-neutral-700/40  // Borders
 ```
 
 ## Git
@@ -140,3 +142,11 @@ Use these slash commands for detailed how-to information:
 - `/development` — Build commands, deployment, GitHub Pages setup, RSS config, common patterns
 - `/content` — Step-by-step content creation, infographic components (stat-block, timeline, comparison-table, progress-bar), markdown features
 - `/css-design` — Full typography scale, spacing system, component patterns, interactive states, testing checklist
+
+### Content Pipeline (user-invoked)
+
+Backlog ideas move through three steps, each opening a PR:
+
+1. `/content-research` — Research a `content/_backlog/` item and write a spec in `.spec/`
+2. `/content-refine` — Discuss and challenge the spec, then update it
+3. `/content-write` — Write the final article or developer post from the refined spec

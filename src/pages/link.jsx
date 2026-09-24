@@ -9,13 +9,13 @@ function MenuItem({ tag, title, current }) {
   return (
     <a
       href={`/link/${tag}`}
-      aria-selected={current ? 'true' : 'false'}
-      className="flex w-full p-1 text-sm tracking-tight font-base dark:text-neutral-100 aria-selected:text-blue-500 aria-selected:dark:text-blue-400"
+      aria-current={current ? 'page' : undefined}
+      className="font-base flex w-full p-1 text-sm tracking-tight aria-[current=page]:text-blue-500 dark:text-neutral-100 aria-[current=page]:dark:text-blue-400"
     >
-      <ChevronRightIcon className="inline-block w-5 h-5 mt-0.5 stroke-current" />
+      <ChevronRightIcon className="mt-0.5 inline-block h-5 w-5 stroke-current" />
       {title}
     </a>
-  );
+  )
 }
 
 export default function List({ links, tag, description }) {
@@ -29,8 +29,8 @@ export default function List({ links, tag, description }) {
         />
       </Head>
       <SimpleLayout>
-        <div className="flex flex-wrap mt-8 md:flex-nowrap">
-          <div className="h-full w-full md:w-48 md:mr-8 md:sticky md:top-32 border-l border-neutral-100 md:pl-3 dark:border-neutral-700">
+        <div className="mt-8 flex flex-wrap md:flex-nowrap">
+          <div className="h-full w-full border-l border-neutral-100 md:sticky md:top-32 md:mr-8 md:w-48 md:pl-3 dark:border-neutral-700">
             {sections.map((section) => (
               <MenuItem
                 key={section.tag}
@@ -40,7 +40,7 @@ export default function List({ links, tag, description }) {
               />
             ))}
           </div>
-          <div className="w-full mt-8 divide-y divide-neutral-100 dark:divide-neutral-800/10 md:-mt-2">
+          <div className="mt-8 w-full divide-y divide-neutral-100 md:-mt-2 dark:divide-neutral-800/10">
             {links.map((content, index) => (
               <ListItem
                 key={`link_${tag}_${index}`}
@@ -58,7 +58,7 @@ export default function List({ links, tag, description }) {
 
 export async function getStaticProps() {
   const section = sections[0]
-  const { links } = await import(`content/link/${section.tag}.json`);
+  const { links } = await import(`content/link/${section.tag}.json`)
 
   return {
     props: {

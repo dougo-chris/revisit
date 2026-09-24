@@ -1,8 +1,8 @@
 ---
-title: "Rails Exception Reporting with JSON"
-tag: "ruby"
-date: "2025-08-08"
-description: "How do you return the exception to the UI in a Rails project"
+title: 'Rails Exception Reporting with JSON'
+tag: 'ruby'
+date: '2025-08-08'
+description: 'How do you return the exception to the UI in a Rails project'
 ---
 
 The Rails project I'm working on contains a significant amount of legacy code, which frequently triggers exceptions. This is an ongoing issue we have to tolerate until we can carry out a major refactor.

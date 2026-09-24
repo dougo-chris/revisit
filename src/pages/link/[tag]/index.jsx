@@ -12,15 +12,15 @@ export default function ListTag({ links, tag, description }) {
 
 export const getStaticPaths = async () => {
   return {
-    paths: sections.map(section => ({ params: { tag: section.tag } })),
+    paths: sections.map((section) => ({ params: { tag: section.tag } })),
     fallback: false,
-  };
-};
+  }
+}
 
 export async function getStaticProps({ params }) {
-  const { tag } = params;
-  const section = sections.find(section => section.tag === tag);
-  const { links } = await import(`content/link/${tag}.json`);
+  const { tag } = params
+  const section = sections.find((section) => section.tag === tag)
+  const { links } = await import(`content/link/${tag}.json`)
 
   return {
     props: {

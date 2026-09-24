@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { Inter } from 'next/font/google'
 
 import { Footer } from '@/components/Footer'
@@ -15,13 +15,15 @@ const inter = Inter({
 })
 
 function usePrevious(value) {
-  let ref = useRef()
+  let [current, setCurrent] = useState(value)
+  let [previous, setPrevious] = useState()
 
-  useEffect(() => {
-    ref.current = value
-  }, [value])
+  if (value !== current) {
+    setPrevious(current)
+    setCurrent(value)
+  }
 
-  return ref.current
+  return previous
 }
 
 export default function App({ Component, pageProps, router }) {
@@ -34,7 +36,7 @@ export default function App({ Component, pageProps, router }) {
           <div className="w-full bg-white ring-1 ring-neutral-100 dark:bg-neutral-900 dark:ring-neutral-300/20" />
         </div>
       </div>
-      <div className="relative flex flex-col min-h-screen">
+      <div className="relative flex min-h-screen flex-col">
         <Header />
         <main className="flex-grow">
           <Component previousPathname={previousPathname} {...pageProps} />

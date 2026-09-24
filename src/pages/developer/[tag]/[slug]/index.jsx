@@ -1,5 +1,5 @@
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import rehypePrismCustom from '@/lib/rehype-prism-custom'
 
 import { ArticleLayout } from '@/components/ArticleLayout'
@@ -33,17 +33,19 @@ export default function DeveloperTagSlug({ content }) {
 }
 
 export const getStaticPaths = async () => {
-	const contents = await getContents('developer');
+  const contents = await getContents('developer')
   return {
-    paths: contents.map(content => ({ params: { tag: content.tag, slug: content.slug } })),
+    paths: contents.map((content) => ({
+      params: { tag: content.tag, slug: content.slug },
+    })),
     fallback: false,
-  };
-};
+  }
+}
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
+  const { slug } = params
 
-  const content = await getContent('developer', slug);
+  const content = await getContent('developer', slug)
   return {
     props: {
       content: content,

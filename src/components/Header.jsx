@@ -2,7 +2,12 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Popover, PopoverButton, PopoverPanel, PopoverBackdrop } from '@headlessui/react'
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  PopoverBackdrop,
+} from '@headlessui/react'
 import clsx from 'clsx'
 
 import { getMenu } from '@/lib/getMenu'
@@ -31,34 +36,31 @@ function MobileNavigation(props) {
 
   return (
     <Popover {...props}>
-      <PopoverButton className="flex items-center px-4 py-2 text-sm font-medium rounded-full shadow-lg group bg-white/90 text-neutral-800 shadow-neutral-800/5 ring-1 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:text-neutral-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <PopoverButton className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-neutral-800 shadow-lg ring-1 shadow-neutral-800/5 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:text-neutral-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
-        <ChevronDownIcon className="w-2 h-auto ml-3 stroke-neutral-500 group-hover:stroke-neutral-700 dark:group-hover:stroke-neutral-400" />
+        <ChevronDownIcon className="ml-3 h-auto w-2 stroke-neutral-500 group-hover:stroke-neutral-700 dark:group-hover:stroke-neutral-400" />
       </PopoverButton>
       <PopoverBackdrop
         transition
-        className="fixed inset-0 z-50 bg-neutral-800/40 backdrop-blur-sm dark:bg-black/80 transition duration-150 data-closed:opacity-0 data-enter:ease-out data-leave:ease-in"
+        className="fixed inset-0 z-50 bg-neutral-800/40 backdrop-blur-sm transition duration-150 data-closed:opacity-0 data-enter:ease-out data-leave:ease-in dark:bg-black/80"
       />
       <PopoverPanel
         transition
         focus
-        className="fixed z-50 p-8 origin-top bg-white inset-x-4 top-8 rounded-lg ring-1 ring-neutral-900/5 dark:bg-neutral-900 dark:ring-neutral-800 transition duration-150 data-closed:opacity-0 data-closed:scale-95 data-enter:ease-out data-leave:ease-in"
+        className="fixed inset-x-4 top-8 z-50 origin-top rounded-lg bg-white p-8 ring-1 ring-neutral-900/5 transition duration-150 data-closed:scale-95 data-closed:opacity-0 data-enter:ease-out data-leave:ease-in dark:bg-neutral-900 dark:ring-neutral-800"
       >
         <div className="flex flex-row-reverse items-center justify-between">
-          <PopoverButton aria-label="Close menu" className="p-1 -m-1">
-            <CloseIcon className="w-6 h-6 text-neutral-500 dark:text-neutral-400" />
+          <PopoverButton aria-label="Close menu" className="-m-1 p-1">
+            <CloseIcon className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
           </PopoverButton>
           <h2 className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
             Navigation
           </h2>
         </div>
         <nav className="mt-6">
-          <ul className="-my-2 text-base divide-y divide-neutral-100 text-neutral-800 dark:divide-neutral-100/5 dark:text-neutral-300">
-            {menu.map(({name, href}, index) => (
-              <MobileNavItem
-                key={`header_mobile_menu_${index}`}
-                href={href}
-              >
+          <ul className="-my-2 divide-y divide-neutral-100 text-base text-neutral-800 dark:divide-neutral-100/5 dark:text-neutral-300">
+            {menu.map(({ name, href }, index) => (
+              <MobileNavItem key={`header_mobile_menu_${index}`} href={href}>
                 {name}
               </MobileNavItem>
             ))}
@@ -81,12 +83,12 @@ function NavItem({ href, children }) {
             'relative block px-3 py-2 transition',
             isActive
               ? 'text-blue-500 dark:text-blue-400'
-              : 'hover:text-blue-500 dark:hover:text-blue-400'
+              : 'hover:text-blue-500 dark:hover:text-blue-400',
           )}
         >
           {children}
           {isActive && (
-            <span className="absolute h-px inset-x-1 -bottom-px bg-linear-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0" />
+            <span className="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0" />
           )}
         </Link>
       </li>
@@ -99,12 +101,9 @@ function DesktopNavigation(props) {
 
   return (
     <nav {...props}>
-      <ul className="flex px-3 text-sm font-medium rounded-full shadow-lg bg-white/90 text-neutral-800 shadow-neutral-800/5 ring-1 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:text-neutral-200 dark:ring-white/10">
-        {menu.map(({name, href}, index) => (
-          <NavItem
-            key={`header_desktop_menu_${index}`}
-            href={href}
-          >
+      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-neutral-800 shadow-lg ring-1 shadow-neutral-800/5 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:text-neutral-200 dark:ring-white/10">
+        {menu.map(({ name, href }, index) => (
+          <NavItem key={`header_desktop_menu_${index}`} href={href}>
             {name}
           </NavItem>
         ))}
@@ -139,11 +138,11 @@ function ModeToggle() {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="px-3 py-2 transition rounded-full shadow-lg group bg-white/90 shadow-neutral-800/5 ring-1 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg ring-1 shadow-neutral-800/5 ring-neutral-900/5 backdrop-blur transition dark:bg-neutral-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
       <SunIcon className="h-6 w-6 fill-neutral-100 stroke-neutral-500 transition group-hover:fill-neutral-200 group-hover:stroke-neutral-700 dark:hidden dark:fill-blue-50 dark:stroke-blue-500 dark:group-hover:fill-blue-50 dark:group-hover:stroke-blue-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-neutral-700 stroke-neutral-500 transition dark:block dark:group-hover:stroke-neutral-400 not-dark:fill-blue-400/10 not-dark:stroke-blue-500" />
+      <MoonIcon className="hidden h-6 w-6 fill-neutral-700 stroke-neutral-500 transition not-dark:fill-blue-400/10 not-dark:stroke-blue-500 dark:block dark:group-hover:stroke-neutral-400" />
     </button>
   )
 }
@@ -159,7 +158,7 @@ function AvatarContainer({ className, ...props }) {
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-neutral-800/5 ring-1 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:ring-white/10'
+        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg ring-1 shadow-neutral-800/5 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:ring-white/10',
       )}
       {...props}
     />
@@ -180,7 +179,7 @@ function Avatar({ large = false, className, ...props }) {
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
           'rounded-full bg-neutral-100 object-cover dark:bg-neutral-800',
-          large ? 'h-16 w-16' : 'h-9 w-9'
+          large ? 'h-16 w-16' : 'h-9 w-9',
         )}
         priority
       />
@@ -191,7 +190,7 @@ function Avatar({ large = false, className, ...props }) {
 export function Header() {
   let isHomePage = useRouter().pathname === '/'
 
-  const menu = getMenu();
+  const menu = getMenu()
 
   let headerRef = useRef()
   let avatarRef = useRef()
@@ -214,7 +213,7 @@ export function Header() {
       let scrollY = clamp(
         window.scrollY,
         0,
-        document.body.scrollHeight - window.innerHeight
+        document.body.scrollHeight - window.innerHeight,
       )
 
       if (isInitial.current) {
@@ -264,7 +263,7 @@ export function Header() {
   return (
     <>
       <header
-        className="relative z-50 flex flex-col pointer-events-none"
+        className="pointer-events-none relative z-50 flex flex-col"
         style={{
           height: 'var(--header-height)',
           marginBottom: 'var(--header-mb)',
@@ -285,9 +284,15 @@ export function Header() {
                   <Avatar />
                 </AvatarContainer>
               </div>
-              <div className="flex justify-end flex-1 md:justify-center">
-                <MobileNavigation menu={menu} className="pointer-events-auto md:hidden" />
-                <DesktopNavigation menu={menu} className="hidden pointer-events-auto md:block" />
+              <div className="flex flex-1 justify-end md:justify-center">
+                <MobileNavigation
+                  menu={menu}
+                  className="pointer-events-auto md:hidden"
+                />
+                <DesktopNavigation
+                  menu={menu}
+                  className="pointer-events-auto hidden md:block"
+                />
               </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">

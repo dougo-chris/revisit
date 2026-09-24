@@ -19,6 +19,7 @@ brew install googleworkspace-cli
 ### Linux
 
 Option A: Pre-built binary from GitHub releases
+
 ```bash
 # Download latest release for linux-amd64
 curl -L -o gws.tar.gz https://github.com/googleworkspace/cli/releases/latest/download/gws-linux-amd64.tar.gz
@@ -28,11 +29,13 @@ rm gws.tar.gz
 ```
 
 Option B: Install via npm
+
 ```bash
 npm install -g @googleworkspace/cli
 ```
 
 Option C: Install via Cargo (requires Rust toolchain)
+
 ```bash
 cargo install --git https://github.com/googleworkspace/cli --locked
 ```
@@ -53,6 +56,7 @@ gws auth login    # Opens browser for Google sign-in
 ```
 
 On a headless Linux box, `gws auth login` may not be able to open a browser. Use the manual flow:
+
 - Run `gws auth login` on the Linux box
 - Copy the auth URL it prints to a browser on another machine
 - Complete sign-in and paste the callback code back
@@ -95,6 +99,7 @@ gws gmail users.messages.get --params '{"userId": "me", "id": "MESSAGE_ID"}'
 ## Next Steps
 
 Once connectivity is confirmed:
+
 - Build the agent layer that consumes `gws gmail +watch` JSON output
 - Define rules for matching email content to jobs
 - See `.spec/2026-04-02-gmail-agent.md` for full agent spec

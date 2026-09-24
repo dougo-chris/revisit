@@ -1,5 +1,5 @@
 ---
-title: "Token Economics"
+title: 'Token Economics'
 date: 2026-02-13T07:40:48.656Z
 modified: 2026-02-13T23:10:00.000Z
 draft: false

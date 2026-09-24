@@ -36,6 +36,7 @@ Agent Process
 ### Job Dispatch
 
 TBD — depends on what jobs need to run. Options:
+
 - Direct function calls within the agent process
 - Shell commands / scripts
 - HTTP calls to external services

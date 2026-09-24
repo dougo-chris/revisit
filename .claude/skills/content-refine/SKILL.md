@@ -34,6 +34,7 @@ This is a back-and-forth conversation. You are encouraged to:
 - **Build on good ideas** — when something clicks, push it further
 
 Topics to explore during discussion:
+
 - Is the angle sharp enough? Would someone actually share this?
 - Is it an article (opinion/business) or developer post (technical/how-to)?
 - What's the hook in the first paragraph?

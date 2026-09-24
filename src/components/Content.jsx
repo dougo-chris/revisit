@@ -14,17 +14,13 @@ export function Content({ content }) {
   }
 
   return (
-    <article className="group md:grid md:grid-cols-6 -mx-4 px-4 pt-6 pb-6 border-t border-neutral-100 dark:border-neutral-800/10 first:border-t-0 rounded-lg transition hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+    <article className="group -mx-4 rounded-lg border-t border-neutral-100 px-4 pt-6 pb-6 transition first:border-t-0 hover:bg-neutral-50 md:grid md:grid-cols-6 dark:border-neutral-800/10 dark:hover:bg-neutral-800/50">
       <Card className="md:col-span-5">
         <Card.Title href={href}>
-          <ChevronRightIcon className="hidden w-5 h-5 -ml-6 -mt-0.5 stroke-current md:inline-block group-hover:stroke-blue-600 dark:group-hover:stroke-blue-500 transition" />
+          <ChevronRightIcon className="-mt-0.5 -ml-6 hidden h-5 w-5 stroke-current transition group-hover:stroke-blue-600 md:inline-block dark:group-hover:stroke-blue-500" />
           {content.title}
         </Card.Title>
-        <Card.Eyebrow
-          as="time"
-          dateTime={content.date}
-          className="md:hidden"
-        >
+        <Card.Eyebrow as="time" dateTime={content.date} className="md:hidden">
           {formatDate(content.date)}
         </Card.Eyebrow>
         <Card.Description>{content.description}</Card.Description>
