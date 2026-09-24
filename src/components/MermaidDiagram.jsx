@@ -85,7 +85,7 @@ export function MermaidDiagram({ children }) {
         </p>
         <details className="mt-2">
           <summary className="cursor-pointer text-xs">View source</summary>
-          <pre className="mt-2 text-xs overflow-x-auto">{children}</pre>
+          <pre className="mt-2 overflow-x-auto text-xs">{children}</pre>
         </details>
       </div>
     )
@@ -93,8 +93,10 @@ export function MermaidDiagram({ children }) {
 
   if (!svg) {
     return (
-      <div className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-zinc-900">
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Loading diagram...</p>
+      <div className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-neutral-900">
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          Loading diagram...
+        </p>
       </div>
     )
   }
@@ -102,7 +104,7 @@ export function MermaidDiagram({ children }) {
   return (
     <div
       ref={containerRef}
-      className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-zinc-900"
+      className="my-6 flex justify-center overflow-x-auto rounded-lg bg-white p-4 dark:bg-neutral-900"
       dangerouslySetInnerHTML={{ __html: svg }}
     />
   )

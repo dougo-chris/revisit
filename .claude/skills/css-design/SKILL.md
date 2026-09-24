@@ -9,48 +9,50 @@ Follow these guidelines for all styling and design work.
 
 ## Color System
 
-### Primary Color Scale: Zinc
+### Primary Color Scale: Neutral
 
-**CRITICAL:** Use **zinc** for all neutral colors. **NEVER use `gray-*` utilities.**
+**CRITICAL:** Use **neutral** for all neutral colors. **NEVER use `gray-*` utilities.**
 
 **Text Colors:**
 
-- `text-zinc-800 dark:text-zinc-100` - Primary text (headings, important content)
-- `text-zinc-600 dark:text-zinc-400` - Secondary text (body copy, descriptions)
-- `text-zinc-500 dark:text-zinc-500` - Tertiary text (timestamps, metadata)
-- `text-zinc-400 dark:text-zinc-500` - Muted text (captions, subtle labels)
+- `text-neutral-800 dark:text-neutral-100` - Primary text (headings, important content)
+- `text-neutral-600 dark:text-neutral-400` - Secondary text (body copy, descriptions)
+- `text-neutral-500 dark:text-neutral-500` - Tertiary text (timestamps, metadata)
+- `text-neutral-400 dark:text-neutral-500` - Muted text (captions, subtle labels)
 
 **Background Colors:**
 
-- `bg-white dark:bg-zinc-900` - Page background
-- `bg-zinc-50 dark:bg-zinc-800` - Subtle backgrounds (hover states, cards)
-- `bg-zinc-100 dark:bg-zinc-800` - Slightly stronger backgrounds
+- `bg-white dark:bg-neutral-900` - Page background
+- `bg-neutral-50 dark:bg-neutral-800` - Subtle backgrounds (hover states, cards)
+- `bg-neutral-100 dark:bg-neutral-800` - Slightly stronger backgrounds
 
 **Border Colors:**
 
-- `border-zinc-100 dark:border-zinc-700/40` - Main borders
-- `border-zinc-200 dark:border-zinc-800` - Dividers
-- `divide-zinc-200` - List dividers (use with divide-y)
+- `border-neutral-100 dark:border-neutral-700/40` - Main borders
+- `border-neutral-200 dark:border-neutral-800` - Dividers
+- `divide-neutral-200` - List dividers (use with divide-y)
 
-### Accent Color: Teal
+### Accent Color: Blue
 
 **Standard Pattern:**
 
 ```jsx
 className =
-  'text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400'
+  'text-neutral-800 hover:text-blue-500 dark:text-neutral-200 dark:hover:text-blue-400'
 ```
 
-**IMPORTANT:** Always use `teal-500` in light mode and `teal-400` in dark mode for consistency.
+**IMPORTANT:** Always use `blue-500` in light mode and `blue-400` in dark mode for consistency.
+
+`blue-500`, `blue-600` and the whole `neutral-*` scale are customised in `tailwind.config.js` (loaded via `@config` in `src/styles/tailwind.css`).
 
 **Light Mode:**
 
-- `teal-500` (#0d9488) - Primary accent, links, hover states
-- `teal-600` (#0f766e) - Darker hover states, active states
+- `blue-500` (#2563EB) - Primary accent, links, hover states
+- `blue-600` (#3843D0) - Main accent fills, active states
 
 **Dark Mode:**
 
-- `teal-400` - Primary accent, links, hover states
+- `blue-400` - Primary accent, links, hover states
 
 ## Dark Mode Patterns
 
@@ -60,20 +62,20 @@ className =
 
 ```jsx
 // Text
-text-zinc-800 dark:text-zinc-100      // Primary
-text-zinc-600 dark:text-zinc-400      // Secondary
+text-neutral-800 dark:text-neutral-100      // Primary
+text-neutral-600 dark:text-neutral-400      // Secondary
 
 // Backgrounds
-bg-white dark:bg-zinc-900             // Page
-bg-zinc-50 dark:bg-zinc-800           // Subtle
+bg-white dark:bg-neutral-900             // Page
+bg-neutral-50 dark:bg-neutral-800           // Subtle
 
 // Borders
-border-zinc-100 dark:border-zinc-700/40
-ring-zinc-900/5 dark:ring-white/10
+border-neutral-100 dark:border-neutral-700/40
+ring-neutral-900/5 dark:ring-white/10
 
 // Interactive
-hover:text-teal-500 dark:hover:text-teal-400
-group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800
+hover:text-blue-500 dark:hover:text-blue-400
+group-hover:bg-neutral-50 dark:group-hover:bg-neutral-800
 ```
 
 ## Typography Scale
@@ -82,32 +84,32 @@ group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800
 
 ```jsx
 className =
-  'text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'
+  'text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 sm:text-5xl'
 ```
 
 **Section Headings (h2):**
 
 ```jsx
-className = 'text-xl font-semibold text-zinc-800 dark:text-zinc-100'
+className = 'text-xl font-semibold text-neutral-800 dark:text-neutral-100'
 ```
 
 **Subsection Headings (h3):**
 
 ```jsx
-className = 'text-base font-semibold text-zinc-800 dark:text-zinc-100'
+className = 'text-base font-semibold text-neutral-800 dark:text-neutral-100'
 ```
 
 **Body Text:**
 
 ```jsx
-className = 'text-base text-zinc-600 dark:text-zinc-400'
+className = 'text-base text-neutral-600 dark:text-neutral-400'
 ```
 
 **Small Text (metadata, captions):**
 
 ```jsx
-className = 'text-sm text-zinc-500 dark:text-zinc-500'
-className = 'text-xs text-zinc-400 dark:text-zinc-500'
+className = 'text-sm text-neutral-500 dark:text-neutral-500'
+className = 'text-xs text-neutral-400 dark:text-neutral-500'
 ```
 
 **Font Weights:**
@@ -160,15 +162,15 @@ py-4       // List items (comfortable)
 **Links and Buttons:**
 
 ```jsx
-className = 'transition hover:text-teal-500 dark:hover:text-teal-400'
+className = 'transition hover:text-blue-500 dark:hover:text-blue-400'
 ```
 
 **Grouped Interactive Elements:**
 
 ```jsx
 className = 'group' // On container
-className = 'group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800' // On child
-className = 'group-hover:text-teal-500 dark:group-hover:text-teal-400' // On text
+className = 'group-hover:bg-neutral-50 dark:group-hover:bg-neutral-800' // On child
+className = 'group-hover:text-blue-500 dark:group-hover:text-blue-400' // On text
 ```
 
 **Transitions:**
@@ -204,20 +206,20 @@ className = 'transition' // Uses default transition settings
 ```jsx
 // Header Navigation
 className =
-  'relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400'
+  'relative block px-3 py-2 transition hover:text-blue-500 dark:hover:text-blue-400'
 
 // Social Links
 className =
-  'flex text-sm font-medium transition group text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400'
+  'flex text-sm font-medium transition group text-neutral-800 hover:text-blue-500 dark:text-neutral-200 dark:hover:text-blue-400'
 ```
 
 ## Critical Rules
 
 ### Don't ❌
 
-- Use `gray-*` utilities (use `zinc-*` instead)
-- Use `teal-500` in dark mode hover states (use `teal-400`)
-- Mix opacity approaches (pick one: `/50` or `bg-zinc-800/50`)
+- Use `gray-*` utilities (use `neutral-*` instead)
+- Use `blue-500` for dark mode hover states (use `blue-400`)
+- Mix opacity approaches (pick one: `/50` or `bg-neutral-800/50`)
 - Hardcode color values (use Tailwind utilities)
 - Skip dark mode pairings on colored elements
 - Use arbitrary values for spacing (use the scale)
@@ -225,8 +227,8 @@ className =
 ### Do ✅
 
 - Always pair light and dark mode utilities
-- Use `zinc-*` for all neutral colors
-- Use `teal-500` (light) and `teal-400` (dark) for accents
+- Use `neutral-*` for all neutral colors
+- Use `blue-500` (light) and `blue-400` (dark) for accents
 - Use the defined spacing scale consistently
 - Group hover effects with `group` and `group-hover:`
 - Add transitions to interactive elements

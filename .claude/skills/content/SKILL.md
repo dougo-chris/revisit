@@ -341,7 +341,7 @@ Display progress indicators with optional labels and colors.
 
 - `blue` - Default, general progress
 - `green` - Success, completion
-- `teal` - Brand color, highlights
+- `teal` - Secondary highlights
 - `red` - Warnings, issues
 - `yellow` - In progress, caution
 

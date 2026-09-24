@@ -6,7 +6,7 @@ A statically-generated Next.js blog/portfolio site based on the Tailwind UI "Spo
 
 - **Next.js 16** - Framework (Pages Router, configured for static export)
 - **React 19** - UI library
-- **Tailwind CSS 4** - Styling (configured in `src/styles/tailwind.css`, not `tailwind.config.js`)
+- **Tailwind CSS 4** - Styling (`src/styles/tailwind.css` loads `tailwind.config.js` via `@config`)
 - **ReactMarkdown** - Markdown rendering (with remark-gfm, rehype-prism)
 - **gray-matter** - Frontmatter parsing
 - **fast-glob** - File discovery
@@ -89,24 +89,24 @@ getAllContents() // article + developer only (for RSS)
 
 ## CSS Design Rules
 
-**Neutral colors:** Use `zinc-*` for all neutrals. **Never use `gray-*` utilities.**
+**Neutral colors:** Use `neutral-*` for all neutrals. **Never use `gray-*` or `zinc-*` utilities.**
 
-**Accent color:** Use `teal-500` in light mode, `teal-400` in dark mode.
+**Accent color:** Use `blue-500` in light mode, `blue-400` in dark mode. `blue-600` for accent fills. Custom values live in `tailwind.config.js`.
 
 ```jsx
 // Standard accent pattern
 className =
-  'text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400'
+  'text-neutral-800 hover:text-blue-500 dark:text-neutral-200 dark:hover:text-blue-400'
 ```
 
 **Dark mode:** Always pair light and dark mode utilities:
 
 ```jsx
-text-zinc-800 dark:text-zinc-100      // Primary text
-text-zinc-600 dark:text-zinc-400      // Secondary text
-bg-white dark:bg-zinc-900             // Page background
-bg-zinc-50 dark:bg-zinc-800           // Subtle background
-border-zinc-100 dark:border-zinc-700/40  // Borders
+text-neutral-800 dark:text-neutral-100      // Primary text
+text-neutral-600 dark:text-neutral-400      // Secondary text
+bg-white dark:bg-neutral-900                // Page background
+bg-neutral-50 dark:bg-neutral-800           // Subtle background
+border-neutral-100 dark:border-neutral-700/40  // Borders
 ```
 
 ## Git

@@ -233,12 +233,10 @@ GENERATE_RSS=false
 
 ## Color Customization
 
-Tailwind 4 is configured CSS-first in `src/styles/tailwind.css` (`@import "tailwindcss"`, `@plugin`, `@variant dark`). `tailwind.config.js` is **not loaded** — there is no `@config` directive — so edits to it have no effect.
+Tailwind 4 loads the legacy JS config through `@config "../../tailwind.config.js"` in `src/styles/tailwind.css`. That file defines:
 
-The teal accent uses Tailwind's default palette: `teal-500` in light mode, `teal-400` in dark mode. To customize colors, add a `@theme` block to `src/styles/tailwind.css`:
+- `blue-500` / `blue-600` — the site accent (#2563EB / #3843D0)
+- `neutral-*` — the neutral scale used for all greys
+- `fontSize` scale and the `typography` (prose) theme, including dark-mode `invert` colors
 
-```css
-@theme {
-  --color-teal-500: #0d9488;
-}
-```
+Change colors or prose styles there. Tailwind 4 no longer supports `@screen` inside the config — use `'@media (min-width: …)'` instead.
