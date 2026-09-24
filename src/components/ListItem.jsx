@@ -14,9 +14,9 @@ export function ListItem({ title, description, date, href }) {
               </time>
             </div>
           )}
-          <div className={date ? "col-span-8" : "col-span-10"}>
-            <h2 className="text-base font-semibold text-neutral-800 dark:text-neutral-100 group-hover:text-blue-500 dark:group-hover:text-blue-400">
-              <ChevronRightIcon className="inline-block w-5 h-5 -mt-0.5 stroke-current" />
+          <div className={date ? 'col-span-8' : 'col-span-10'}>
+            <h2 className="text-base font-semibold text-neutral-800 group-hover:text-blue-500 dark:text-neutral-100 dark:group-hover:text-blue-400">
+              <ChevronRightIcon className="-mt-0.5 inline-block h-5 w-5 stroke-current" />
               {title}
             </h2>
             <p className="ml-6 text-sm text-neutral-600 dark:text-neutral-400">

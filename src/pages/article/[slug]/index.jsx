@@ -1,5 +1,5 @@
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import rehypePrismCustom from '@/lib/rehype-prism-custom'
 
 import { ArticleLayout } from '@/components/ArticleLayout'
@@ -33,17 +33,17 @@ export default function ArticleSlug({ content, previousPathname }) {
 }
 
 export const getStaticPaths = async () => {
-	const contents = await getContents('article');
+  const contents = await getContents('article')
   return {
-    paths: contents.map(content => ({ params: { slug: content.slug } })),
+    paths: contents.map((content) => ({ params: { slug: content.slug } })),
     fallback: false,
-  };
-};
+  }
+}
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
+  const { slug } = params
 
-  const content = await getContent('article', slug);
+  const content = await getContent('article', slug)
   return {
     props: {
       content: content,

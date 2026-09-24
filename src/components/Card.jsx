@@ -16,9 +16,9 @@ export function Card({ as: Component = 'div', className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute z-0 transition opacity-0 -inset-y-6 -inset-x-4 bg-neutral-50 group-hover:scale-100 group-hover:opacity-100 dark:bg-neutral-800/50 sm:-inset-x-6 sm:rounded-lg" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 bg-neutral-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-lg dark:bg-neutral-800/50" />
       <Link {...props}>
-        <span className="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-lg" />
+        <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-lg" />
         <span className="relative z-10">{children}</span>
       </Link>
     </>
@@ -27,7 +27,7 @@ Card.Link = function CardLink({ children, ...props }) {
 
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   return (
-    <Component className="text-base font-semibold tracking-tight text-neutral-800 dark:text-neutral-100 group-hover:text-blue-500 dark:group-hover:text-blue-400">
+    <Component className="text-base font-semibold tracking-tight text-neutral-800 group-hover:text-blue-500 dark:text-neutral-100 dark:group-hover:text-blue-400">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
@@ -45,10 +45,10 @@ Card.Cta = function CardCta({ children }) {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 flex items-center mt-1 text-sm font-medium text-blue-500"
+      className="relative z-10 mt-1 flex items-center text-sm font-medium text-blue-500"
     >
       {children}
-      <ChevronRightIcon className="w-4 h-4 ml-1 stroke-current" />
+      <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
     </div>
   )
 }
@@ -65,7 +65,7 @@ Card.Eyebrow = function CardEyebrow({
       className={clsx(
         className,
         'relative z-10 order-first mb-3 flex items-center text-sm text-neutral-400 dark:text-neutral-500',
-        decorate && 'pl-3.5'
+        decorate && 'pl-3.5',
       )}
       {...props}
     >

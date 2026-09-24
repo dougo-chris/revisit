@@ -25,8 +25,8 @@ export function getMenu() {
     menu.push({
       name: 'Backlog',
       href: '/backlog',
-    });
+    })
   }
 
-  return menu;
-};
+  return menu
+}

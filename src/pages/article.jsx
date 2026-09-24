@@ -8,9 +8,7 @@ export default function Article({ contents }) {
   return (
     <>
       <Head>
-        <title>
-          Revisit.fm - Thoughs and Ideas from Christopher Douglas
-        </title>
+        <title>Revisit.fm - Thoughs and Ideas from Christopher Douglas</title>
         <meta
           name="description"
           content="I’m Chris, a software developer and entrepreneur based in Melbourne, Australia. I’m the founder and CEO of FolioReady, where we make document collection easy."
@@ -18,7 +16,7 @@ export default function Article({ contents }) {
       </Head>
       <SimpleLayout>
         <div>
-          <div className="flex flex-col max-w-4xl">
+          <div className="flex max-w-4xl flex-col">
             {contents.map((content) => (
               <Content key={content.slug} content={content} />
             ))}

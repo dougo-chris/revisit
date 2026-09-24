@@ -5,7 +5,10 @@ import { generateRssFeed } from '@/lib/generateRssFeed'
 export default About
 
 export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production' && process.env.GENERATE_RSS === 'true') {
+  if (
+    process.env.NODE_ENV === 'production' &&
+    process.env.GENERATE_RSS === 'true'
+  ) {
     let contents = await getAllContents()
     await generateRssFeed({ contents })
   }

@@ -1,6 +1,6 @@
 ---
-title: "The best product no-one has heard of?"
-date: "2025-07-31"
+title: 'The best product no-one has heard of?'
+date: '2025-07-31'
 description: "I've build FolioReady and it's pretty good, yet no-one knows it exists. What can I do about this?"
 ---
 
@@ -13,19 +13,25 @@ I added "Simple Analytics" to my site to see where people are visiting from. The
 So now I need to revisit my plan and look at ways to get users.
 
 ### Forums
+
 There are forums and discord groups where I can talk about what I'm building and ask for feedback.
 
 ### Direct contact with ideal customers
+
 Find companies and consultants that build products on the integration partner's platform and ask what they use.
 
 ### Blog posts
+
 Create content on the FolioReady.com site. Showcase how it works.
 
 ### Integration marketing
+
 Continue to explore how I can be listed on other sites as an integration partner. What I've found is integration approval is really slow. I've been working with one company for over 6 months and I'm still not approved to be listed on their site. But it's still something I have to explore and work through.
 
 ### The Ask
+
 It's time to start the "ask".
+
 - Ask people to explain how they are solving this problem now.
 - Ask is FolioReady a solution they would pay for?
 - Ask for people to trial FolioReady.

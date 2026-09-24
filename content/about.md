@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: 'About'
 ---
 
 # Software Engineer & Founder
@@ -21,6 +21,7 @@ I'm a hands-on developer who believes in leading by doing. Whether it's architec
 ## Current Interests
 
 Right now I'm exploring:
+
 - The shift from generative AI to agentic AI and what it means for product builders
 - Why "vibe coding" with AI tools might be better than traditional no-code platforms
 - How developer teams can effectively support and communicate with customer success teams

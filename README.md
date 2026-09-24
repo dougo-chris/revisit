@@ -15,17 +15,20 @@ A statically-generated Next.js blog/portfolio site built with Tailwind CSS. Feat
 ## Getting Started
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Create `.env.local` and set environment variables:
+
 ```env
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 GENERATE_RSS=false
 ```
 
 3. Start development server:
+
 ```bash
 npm run dev
 ```

@@ -4,34 +4,41 @@ import { InfographicBlock } from './Infographic'
 // Helper to extract text content from React children
 function getTextContent(children) {
   if (typeof children === 'string') {
-    return children;
+    return children
   }
 
   if (Array.isArray(children)) {
-    return children.map(getTextContent).join('');
+    return children.map(getTextContent).join('')
   }
 
   if (children && typeof children === 'object' && children.props) {
-    return getTextContent(children.props.children);
+    return getTextContent(children.props.children)
   }
 
-  return String(children || '');
+  return String(children || '')
 }
 
 export function CodeBlock({ node, inline, className, children, ...props }) {
   // Handle className as string or array
-  const classNameStr = Array.isArray(className) ? className.join(' ') : (className || '')
+  const classNameStr = Array.isArray(className)
+    ? className.join(' ')
+    : className || ''
   const match = /language-([\w-]+)/.exec(classNameStr)
   const language = match ? match[1] : null
 
   // Only process block-level code (not inline code)
   if (!inline && language === 'mermaid') {
-    const code = getTextContent(children).trim();
+    const code = getTextContent(children).trim()
     return <MermaidDiagram>{code}</MermaidDiagram>
   }
 
   // Handle infographic types
-  if (!inline && ['stat-block', 'timeline', 'comparison-table', 'progress-bar'].includes(language)) {
+  if (
+    !inline &&
+    ['stat-block', 'timeline', 'comparison-table', 'progress-bar'].includes(
+      language,
+    )
+  ) {
     const code = getTextContent(children).trim()
     return <InfographicBlock language={language}>{code}</InfographicBlock>
   }
@@ -53,10 +60,18 @@ export function PreBlock({ children, node, ...props }) {
     const className = childProps.className
 
     // Handle className as string or array
-    const classNameStr = Array.isArray(className) ? className.join(' ') : (className || '')
+    const classNameStr = Array.isArray(className)
+      ? className.join(' ')
+      : className || ''
 
     const match = /language-([\w-]+)/.exec(classNameStr)
-    const infographicTypes = ['mermaid', 'stat-block', 'timeline', 'comparison-table', 'progress-bar']
+    const infographicTypes = [
+      'mermaid',
+      'stat-block',
+      'timeline',
+      'comparison-table',
+      'progress-bar',
+    ]
 
     if (match && infographicTypes.includes(match[1])) {
       // Return just the code block component, unwrapped from pre

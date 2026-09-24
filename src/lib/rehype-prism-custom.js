@@ -27,7 +27,7 @@ export default function rehypePrismCustom() {
         return
       }
 
-      const languageClass = className.find(c => c.startsWith('language-'))
+      const languageClass = className.find((c) => c.startsWith('language-'))
 
       if (!languageClass) {
         return
@@ -48,7 +48,7 @@ export default function rehypePrismCustom() {
       try {
         const result = refractor.highlight(
           node.children[0]?.value || '',
-          language
+          language,
         )
         node.children = result.children
       } catch (err) {

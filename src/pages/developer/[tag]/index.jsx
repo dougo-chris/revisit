@@ -13,17 +13,17 @@ export default function DeveloperTag({ tag, contents }) {
 
 export const getStaticPaths = async () => {
   return {
-    paths: tags.map(tag => ({ params: { tag: tag.tag } })),
+    paths: tags.map((tag) => ({ params: { tag: tag.tag } })),
     fallback: false,
-  };
-};
+  }
+}
 
 export async function getStaticProps({ params }) {
-  const { tag } = params;
-  const contents = await getContents('developer');
+  const { tag } = params
+  const contents = await getContents('developer')
   return {
     props: {
-      contents: contents.filter(content => content.tag == tag),
+      contents: contents.filter((content) => content.tag == tag),
       tag: tag,
     },
   }
