@@ -1,17 +1,23 @@
-# Claude Configuration & Guidelines
+# Claude Configuration
 
-This directory contains configuration files and project guidelines for the Revisit blog project.
+Claude Code configuration for the Revisit blog. Project instructions live in [`CLAUDE.md`](../CLAUDE.md) at the repo root.
 
-## Guidelines Documentation
+## Skills
 
-All project guidelines are organized in the `guidelines/` subdirectory:
+Reference guides (Claude loads these automatically when relevant):
 
-- **[Content Creation](./guidelines/content.md)** - Guidelines for creating and managing blog content, including frontmatter, structure, and best practices
-- **[CSS Design System](./guidelines/css-design-system.md)** - CSS design system guidelines and patterns for styling
-- **[Development & Coding](./guidelines/development.md)** - Development setup, coding standards, and project architecture
-- **[Spec Workflow](./guidelines/spec-workflow.md)** - Process for creating and managing specifications
+- **[development](./skills/development/SKILL.md)** — Build commands, static export, routing, deployment, RSS
+- **[content](./skills/content/SKILL.md)** — Content types, frontmatter, markdown features, infographic components
+- **[css-design](./skills/css-design/SKILL.md)** — Colors, typography, spacing, dark mode, component patterns
+
+Content pipeline (run manually, in order):
+
+- **[/content-research](./skills/content-research/SKILL.md)** — Backlog item → researched spec in `.spec/`
+- **[/content-refine](./skills/content-refine/SKILL.md)** — Discuss and refine a spec
+- **[/content-write](./skills/content-write/SKILL.md)** — Refined spec → published article
 
 ## Configuration
 
-- **`settings.local.json`** - Local Claude Code settings
-- **`.env.local`** - Local environment variables (gitignored)
+- **`settings.json`** — Shared settings (committed): safe permissions and the push-to-main guard
+- **`hooks/block-push-on-main.sh`** — Blocks `git push` while on `main`
+- **`settings.local.json`** — Personal settings (gitignored)

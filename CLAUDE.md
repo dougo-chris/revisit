@@ -4,9 +4,9 @@ A statically-generated Next.js blog/portfolio site based on the Tailwind UI "Spo
 
 ## Technologies
 
-- **Next.js 15** - Framework (configured for static export)
-- **React 18** - UI library
-- **Tailwind CSS 4** - Styling
+- **Next.js 16** - Framework (Pages Router, configured for static export)
+- **React 19** - UI library
+- **Tailwind CSS 4** - Styling (configured in `src/styles/tailwind.css`, not `tailwind.config.js`)
 - **ReactMarkdown** - Markdown rendering (with remark-gfm, rehype-prism)
 - **gray-matter** - Frontmatter parsing
 - **fast-glob** - File discovery
@@ -71,6 +71,7 @@ This is the ONLY content type with 3-level routing. The tag is part of the URL p
 ```
 
 **Key conventions:**
+
 - Underscore prefix (`_backlog`) hides directories from production menu
 - Only `article` and `developer` content included in RSS feeds
 - Filename format: `YYYY-MM-DD-slug-name.md` — date-based naming, becomes the URL slug
@@ -81,9 +82,9 @@ This is the ONLY content type with 3-level routing. The tag is part of the URL p
 **Content loading** is in `/src/lib/getContent.js`:
 
 ```javascript
-getContent(type, slug)   // Single item with frontmatter + body
-getContents(type)        // All items of a type (metadata only)
-getAllContents()          // article + developer only (for RSS)
+getContent(type, slug) // Single item with frontmatter + body
+getContents(type) // All items of a type (metadata only)
+getAllContents() // article + developer only (for RSS)
 ```
 
 ## CSS Design Rules
@@ -94,7 +95,8 @@ getAllContents()          // article + developer only (for RSS)
 
 ```jsx
 // Standard accent pattern
-className="text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+className =
+  'text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400'
 ```
 
 **Dark mode:** Always pair light and dark mode utilities:
@@ -140,3 +142,11 @@ Use these slash commands for detailed how-to information:
 - `/development` — Build commands, deployment, GitHub Pages setup, RSS config, common patterns
 - `/content` — Step-by-step content creation, infographic components (stat-block, timeline, comparison-table, progress-bar), markdown features
 - `/css-design` — Full typography scale, spacing system, component patterns, interactive states, testing checklist
+
+### Content Pipeline (user-invoked)
+
+Backlog ideas move through three steps, each opening a PR:
+
+1. `/content-research` — Research a `content/_backlog/` item and write a spec in `.spec/`
+2. `/content-refine` — Discuss and challenge the spec, then update it
+3. `/content-write` — Write the final article or developer post from the refined spec

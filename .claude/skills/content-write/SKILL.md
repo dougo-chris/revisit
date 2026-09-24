@@ -29,29 +29,33 @@ The user provides a spec — either a filename from `.spec/` or a topic to searc
 ### 3. Write the content
 
 Create the content file in the appropriate directory:
+
 - Articles: `content/article/YYYY-MM-DD-slug.md`
 - Developer posts: `content/developer/YYYY-MM-DD-slug.md`
 
 **Frontmatter format for articles:**
+
 ```yaml
 ---
-title: "Title Here"
-date: "YYYY-MM-DD"
-description: "One sentence description — no trailing period"
+title: 'Title Here'
+date: 'YYYY-MM-DD'
+description: 'One sentence description — no trailing period'
 ---
 ```
 
 **Frontmatter format for developer posts:**
+
 ```yaml
 ---
-title: "Title Here"
-tag: "tag-from-tags-json"
-date: "YYYY-MM-DD"
-description: "One sentence description — no trailing period"
+title: 'Title Here'
+tag: 'tag-from-tags-json'
+date: 'YYYY-MM-DD'
+description: 'One sentence description — no trailing period'
 ---
 ```
 
 **Writing guidelines:**
+
 - Follow the outline and decisions from the spec
 - Match the voice of existing content — direct, no fluff, opinionated
 - Use short paragraphs (2-4 sentences)

@@ -56,12 +56,15 @@ Create `.spec/YYYY-MM-DD-topic-slug.md` with this structure:
 ## Research
 
 ### Key findings
+
 [Bullet points of interesting facts, data, examples found during research]
 
 ### References
+
 [Links and sources discovered during research]
 
 ### Counterarguments
+
 [What would someone who disagrees say? What are the weak points?]
 
 ## Suggested Angle
