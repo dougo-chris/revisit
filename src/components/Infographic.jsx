@@ -337,43 +337,40 @@ function InfographicError({ error, rawJSON, language }) {
   )
 }
 
+const INFOGRAPHICS = {
+  'stat-block': StatBlock,
+  timeline: Timeline,
+  'comparison-table': ComparisonTable,
+  'progress-bar': ProgressBar,
+}
+
+function parseInfographic(language, rawJSON) {
+  if (!rawJSON) {
+    return { error: new Error('No data provided') }
+  }
+
+  const Component = INFOGRAPHICS[language]
+  if (!Component) {
+    return { error: new Error(`Unknown infographic type: ${language}`) }
+  }
+
+  try {
+    return { Component, data: JSON.parse(rawJSON) }
+  } catch (parseError) {
+    return { error: new Error(`Invalid JSON: ${parseError.message}`) }
+  }
+}
+
 // Main InfographicBlock Component - Routes to appropriate subcomponent
 export function InfographicBlock({ language, children }) {
   const rawJSON = getTextContent(children).trim()
+  const { Component, data, error } = parseInfographic(language, rawJSON)
 
-  try {
-    // Parse JSON data
-    if (!rawJSON) {
-      throw new Error('No data provided')
-    }
-
-    let data
-    try {
-      data = JSON.parse(rawJSON)
-    } catch (parseError) {
-      throw new Error(`Invalid JSON: ${parseError.message}`)
-    }
-
-    // Route to appropriate component based on language
-    switch (language) {
-      case 'stat-block':
-        return <StatBlock data={data} />
-
-      case 'timeline':
-        return <Timeline data={data} />
-
-      case 'comparison-table':
-        return <ComparisonTable data={data} />
-
-      case 'progress-bar':
-        return <ProgressBar data={data} />
-
-      default:
-        throw new Error(`Unknown infographic type: ${language}`)
-    }
-  } catch (error) {
+  if (error) {
     return (
       <InfographicError error={error} rawJSON={rawJSON} language={language} />
     )
   }
+
+  return <Component data={data} />
 }
