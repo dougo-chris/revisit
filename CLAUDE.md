@@ -7,7 +7,7 @@ A statically-generated Next.js blog/portfolio site based on the Tailwind UI "Spo
 - **Next.js 16** - Framework (Pages Router, configured for static export)
 - **React 19** - UI library
 - **Tailwind CSS 4** - Styling (`src/styles/tailwind.css` loads `tailwind.config.js` via `@config`)
-- **ReactMarkdown** - Markdown rendering (with remark-gfm, rehype-prism)
+- **ReactMarkdown** - Markdown rendering (with remark-gfm and a custom refractor-based Prism plugin)
 - **gray-matter** - Frontmatter parsing
 - **fast-glob** - File discovery
 - **@headlessui/react** - Accessible UI components

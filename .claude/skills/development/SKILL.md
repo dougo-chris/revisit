@@ -101,7 +101,7 @@ getAllContents() // Load article + developer only (for RSS)
 ```javascript
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm' // Tables, strikethrough
-import rehypePrism from '@mapbox/rehype-prism' // Syntax highlighting
+import rehypePrismCustom from '@/lib/rehype-prism-custom' // Syntax highlighting (refractor; skips infographic blocks)
 ```
 
 All markdown is rendered through `ReactMarkdown` with these plugins.
